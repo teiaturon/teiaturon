@@ -228,7 +228,7 @@ const PROJECTES = {
       categoria: { ca: 'Design Thinking · Erasmus a Siena', es: 'Design Thinking · Erasmus en Siena', en: 'Design Thinking · Erasmus in Siena' },
       any: '2025-26',
       carpeta: 'assets/projectes/academics/projecte-6/',
-      portada: 'portada.jpg',
+      portada: 'portada-jens.jpg',
       sencera: true,          // la imatge de la targeta es veu sencera, sense retallar
       fons: '#ffffff',
       document: {

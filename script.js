@@ -1,3 +1,8 @@
+/* ============ VERSIÓ DELS ARXIUS ============
+   S'afegeix a imatges i PDF perquè el navegador no mostri versions antigues. */
+const ASSET_V = ((document.currentScript && document.currentScript.src.match(/[?&]v=(\d+)/)) || [])[1] || '';
+const withV = url => (!ASSET_V || /^https?:\/\//.test(url) || !url) ? url : url + (url.includes('?') ? '&' : '?') + 'v=' + ASSET_V;
+
 /* ============ ANY AL PEU ============ */
 document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -214,6 +219,7 @@ function media(src, { colorIndex = 0, label = '', video = {}, playable = false }
   if (!src) return placeholder(colorIndex, label);
   const yt = youtubeId(src);
   if (yt) return youtube(yt, { playable, label });
+  src = withV(src);
   let el;
   if (/\.(mp4|webm|mov)$/i.test(src)) {
     el = document.createElement('video');
@@ -372,7 +378,7 @@ function fillModal(p, index = 0) {
   const doc = document.getElementById('modal-doc');
   doc.hidden = !p.document;
   if (p.document) {
-    doc.href = p.carpeta + p.document.fitxer;
+    doc.href = withV(p.carpeta + p.document.fitxer);
     document.getElementById('modal-doc-text').textContent = tx(p.document.text) || t('modal.pdf');
   }
 
