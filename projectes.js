@@ -80,16 +80,31 @@ const PROJECTES = {
       }
     },
     {
-      titol: { ca: 'Projecte acadèmic 2', es: 'Proyecto académico 2', en: 'Academic project 2' },
-      categoria: { ca: '[Categoria]', es: '[Categoría]', en: '[Category]' },
-      any: '[Any]',
+      titol: 'Valentes i Acompanyades',
+      categoria: { ca: 'Spot audiovisual', es: 'Spot audiovisual', en: 'Video spot' },
+      any: '2024',
       carpeta: 'assets/projectes/academics/projecte-2/',
-      portada: 'portada.jpg',
-      galeria: ['1.jpg', '2.jpg', '3.jpg'],
-      descripcio:  { ca: '[Explicació breu del projecte]', es: '[Explicación breve del proyecto]', en: '[Short description of the project]' },
-      objectiu:    { ca: '[Objectiu del projecte]', es: '[Objetivo del proyecto]', en: '[Project goal]' },
-      concepte:    { ca: '[Concepte creatiu]', es: '[Concepto creativo]', en: '[Creative concept]' },
-      contribucio: { ca: '[La meva contribució]', es: '[Mi contribución]', en: '[My contribution]' }
+      portada: 'making-of-3.jpg',
+      galeria: [
+        'https://www.youtube.com/watch?v=3F-JGPksnVY',   // el vídeo es pot veure dins la finestra
+        'making-of-1.jpg', 'making-of-2.jpg', 'making-of-3.jpg', 'making-of-4.jpg', 'making-of-5.jpg'
+      ],
+      descripcio: {
+        ca: "Spot per a Valentes i Acompanyades, una ONG que lluita contra els matrimonis forçats. El vam gravar i editar en equip l'any 2024.",
+        es: 'Spot para Valentes i Acompanyades, una ONG que lucha contra los matrimonios forzados. Lo grabamos y editamos en equipo en 2024.',
+        en: 'A spot for Valentes i Acompanyades, an NGO fighting against forced marriage. We shot and edited it as a team in 2024.'
+      },
+      objectiu: {
+        ca: 'Donar veu a la causa de Valentes i Acompanyades i sensibilitzar sobre els matrimonis forçats.',
+        es: 'Dar voz a la causa de Valentes i Acompanyades y sensibilizar sobre los matrimonios forzados.',
+        en: 'To give a voice to the cause of Valentes i Acompanyades and raise awareness about forced marriage.'
+      },
+      concepte: '',   // ✏️ afegeix-hi el concepte creatiu quan el tinguis
+      contribucio: {
+        ca: 'Vaig ser la segona directora del projecte i vaig participar en la gravació i el muntatge del spot.',
+        es: 'Fui la segunda directora del proyecto y participé en la grabación y el montaje del spot.',
+        en: 'I was the assistant director of the project and took part in shooting and editing the spot.'
+      }
     },
     {
       titol: { ca: 'Projecte acadèmic 3', es: 'Proyecto académico 3', en: 'Academic project 3' },

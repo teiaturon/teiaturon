@@ -5,6 +5,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
    ✏️ Si canvies un text de la web, canvia'l aquí en els tres idiomes. */
 const I18N = {
   ca: {
+    'modal.play': 'Reprodueix el vídeo',
     'modal.pdf': 'Obre el PDF',
     'nav.home': 'Inici',
     'about.skills': "Habilitats",
@@ -27,6 +28,7 @@ const I18N = {
     'footer': 'Fet amb molta creativitat'
   },
   es: {
+    'modal.play': 'Reproducir el vídeo',
     'modal.pdf': 'Abre el PDF',
     'nav.home': 'Inicio',
     'about.skills': "Habilidades",
@@ -49,6 +51,7 @@ const I18N = {
     'footer': 'Hecho con mucha creatividad'
   },
   en: {
+    'modal.play': 'Play video',
     'modal.pdf': 'Open the PDF',
     'nav.home': 'Home',
     'about.skills': "Skills",
@@ -173,8 +176,43 @@ function placeholder(colorIndex, label) {
 }
 
 // Crea una <img> o un <video>; si l'arxiu no existeix, posa un requadre provisional
-function media(src, { colorIndex = 0, label = '', video = {} } = {}) {
+// Enllaços de YouTube: retorna l'identificador del vídeo
+function youtubeId(url) {
+  const m = /(?:youtube\.com\/(?:watch\?(?:.*&)?v=|embed\/|shorts\/)|youtu\.be\/)([\w-]{11})/.exec(url || '');
+  return m ? m[1] : null;
+}
+
+// Vídeo de YouTube: miniatura amb botó de play; en clicar, es reprodueix aquí mateix
+function youtube(id, { playable = false, label = '' } = {}) {
+  const box = document.createElement('div');
+  box.className = 'yt';
+  const img = document.createElement('img');
+  img.src = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+  img.alt = '';
+  img.addEventListener('error', () => { img.style.visibility = 'hidden'; }, { once: true });
+  const play = document.createElement(playable ? 'button' : 'span');
+  play.className = 'yt__play';
+  if (playable) {
+    play.type = 'button';
+    play.setAttribute('aria-label', `${t('modal.play')}: ${label}`);
+    play.addEventListener('click', () => {
+      const f = document.createElement('iframe');
+      f.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+      f.title = label;
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      box.replaceChildren(f);
+    });
+    box._reset = () => { if (box.querySelector('iframe')) box.replaceChildren(img, play); };
+  }
+  box.append(img, play);
+  return box;
+}
+
+function media(src, { colorIndex = 0, label = '', video = {}, playable = false } = {}) {
   if (!src) return placeholder(colorIndex, label);
+  const yt = youtubeId(src);
+  if (yt) return youtube(yt, { playable, label });
   let el;
   if (/\.(mp4|webm|mov)$/i.test(src)) {
     el = document.createElement('video');
@@ -207,7 +245,7 @@ function buildCards(list, container, kind) {
     const box = document.createElement('span');
     box.className = 'pcard__media';
     const colorIndex = kind === 'pro' ? i : i + 2;
-    const cover = media(p.portada ? p.carpeta + p.portada : '', {
+    const cover = media(!p.portada ? '' : /^https?:\/\//.test(p.portada) ? p.portada : p.carpeta + p.portada, {
       colorIndex, video: { autoplay: true, loop: true }
     });
     if (p.enfoc) cover.style.objectPosition = p.enfoc;
@@ -271,11 +309,11 @@ function fillModal(p, index = 0) {
   modal.stage.innerHTML = '';
   modal.thumbs.innerHTML = '';
   items.forEach((file, i) => {
-    const src = file ? p.carpeta + file : '';
-    const label = `${t('projects.image')} ${i + 1}`;
+    const src = !file ? '' : /^https?:\/\//.test(file) ? file : p.carpeta + file;
+    const label = youtubeId(src) ? tx(p.titol) : `${t('projects.image')} ${i + 1}`;
     const item = document.createElement('div');
     item.className = 'gallery__item';
-    item.appendChild(media(src, { colorIndex: i, label, video: { controls: true } }));
+    item.appendChild(media(src, { colorIndex: i, label, video: { controls: true }, playable: true }));
     modal.stage.appendChild(item);
 
     const th = document.createElement('button');
@@ -318,7 +356,10 @@ function showSlide(i) {
   modal.index = (i + slides.length) % slides.length;
   slides.forEach((s, n) => {
     s.classList.toggle('is-active', n === modal.index);
-    if (n !== modal.index) s.querySelector('video')?.pause();
+    if (n !== modal.index) {
+      s.querySelector('video')?.pause();
+      s.querySelector('.yt')?._reset?.();       // atura el vídeo de YouTube
+    }
   });
   [...modal.thumbs.children].forEach((th, n) => th.setAttribute('aria-current', n === modal.index));
   modal.thumbs.children[modal.index]?.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' });
@@ -342,6 +383,7 @@ function closeModal() {
   if (!modal.current) return;
   modal.el.classList.remove('is-open');
   modal.stage.querySelectorAll('video').forEach(v => v.pause());
+  modal.stage.querySelectorAll('.yt').forEach(y => y._reset?.());
   modal.current = null;
   document.body.classList.remove('modal-open');
   modal.closeTimer = setTimeout(() => { modal.el.hidden = true; }, 450);

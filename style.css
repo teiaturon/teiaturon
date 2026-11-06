@@ -391,8 +391,8 @@ mark { background: none; color: inherit; }
   position: relative; aspect-ratio: 16 / 10; width: 100%; max-height: min(56svh, 500px); overflow: hidden;
   background: var(--ink); border: 2.5px solid var(--ink); border-radius: 14px;
 }
-.gallery__item { position: absolute; inset: 0; opacity: 0; transition: opacity .45s ease; }
-.gallery__item.is-active { opacity: 1; }
+.gallery__item { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .45s ease, visibility 0s linear .45s; }
+.gallery__item.is-active { opacity: 1; visibility: visible; transition: opacity .45s ease; }
 .gallery__item img, .gallery__item video { width: 100%; height: 100%; object-fit: contain; }
 .gallery__btn {
   position: absolute; top: calc((100% - 4.2rem) / 2); transform: translateY(-50%); z-index: 2;
@@ -416,6 +416,22 @@ mark { background: none; color: inherit; }
 .gallery__thumb .ph small { display: none; }
 .gallery__thumb:hover { opacity: .85; }
 .gallery__thumb[aria-current="true"] { opacity: 1; box-shadow: 3px 3px 0 var(--rose); transform: translateY(-2px); }
+
+/* Vídeos de YouTube */
+.yt { position: relative; width: 100%; height: 100%; background: var(--ink); }
+.yt img { width: 100%; height: 100%; object-fit: cover; }
+.gallery__item .yt img { object-fit: contain; }
+.yt iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.yt__play {
+  position: absolute; left: 50%; top: 50%; translate: -50% -50%;
+  width: 76px; height: 76px; border-radius: 50%; padding: 0; cursor: pointer;
+  background: var(--tomato); border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--ink);
+  display: grid; place-items: center; transition: transform .25s cubic-bezier(.2,.9,.3,1.4), background .2s;
+}
+.yt__play::after { content: ''; border-style: solid; border-width: 13px 0 13px 21px; border-color: transparent transparent transparent var(--vanilla); margin-left: 6px; }
+.yt__play:hover, .yt__play:focus-visible { transform: scale(1.1); background: var(--rose); outline: none; }
+.gallery__thumb .yt__play { width: 22px; height: 22px; border-width: 2px; box-shadow: none; }
+.gallery__thumb .yt__play::after { border-width: 4px 0 4px 7px; margin-left: 2px; }
 
 /* Caixa de text */
 .modal__text {
