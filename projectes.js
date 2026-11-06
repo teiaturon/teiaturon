@@ -193,16 +193,35 @@ const PROJECTES = {
       }
     },
     {
-      titol: { ca: 'Projecte acadèmic 5', es: 'Proyecto académico 5', en: 'Academic project 5' },
-      categoria: { ca: '[Categoria]', es: '[Categoría]', en: '[Category]' },
-      any: '[Any]',
+      titol: "Devesa't",
+      categoria: { ca: 'Xarxes socials · Instagram', es: 'Redes sociales · Instagram', en: 'Social media · Instagram' },
+      any: '',   // ✏️ posa-hi l'any del projecte
       carpeta: 'assets/projectes/academics/projecte-5/',
       portada: 'portada.jpg',
-      galeria: ['1.jpg', '2.jpg', '3.jpg'],
-      descripcio:  { ca: '[Explicació breu del projecte]', es: '[Explicación breve del proyecto]', en: '[Short description of the project]' },
-      objectiu:    { ca: '[Objectiu del projecte]', es: '[Objetivo del proyecto]', en: '[Project goal]' },
-      concepte:    { ca: '[Concepte creatiu]', es: '[Concepto creativo]', en: '[Creative concept]' },
-      contribucio: { ca: '[La meva contribució]', es: '[Mi contribución]', en: '[My contribution]' }
+      document: {
+        fitxer: 'presentacio-devesat.pdf',
+        text: { ca: 'Veure la presentació', es: 'Ver la presentación', en: 'View the presentation' }
+      },
+      galeria: [
+        'diapo-01.jpg', 'diapo-02.jpg', 'diapo-03.jpg', 'diapo-04.jpg', 'diapo-05.jpg', 'diapo-06.jpg', 'diapo-07.jpg', 'diapo-08.jpg',
+        'diapo-09.jpg', 'diapo-10.jpg', 'diapo-11.jpg', 'diapo-12.jpg', 'diapo-13.jpg', 'diapo-14.jpg', 'diapo-15.jpg', 'diapo-16.jpg'
+      ],
+      descripcio: {
+        ca: "Perfil d'Instagram (i TikTok) creat en un equip de deu persones per promocionar el parc de la Devesa de Girona entre els joves.",
+        es: 'Perfil de Instagram (y TikTok) creado en un equipo de diez personas para promocionar el parque de la Devesa de Girona entre los jóvenes.',
+        en: 'An Instagram (and TikTok) profile created by a team of ten to promote Girona’s Devesa park among young people.'
+      },
+      objectiu: {
+        ca: "Fer que els joves de 13 a 17 anys descobreixin la Devesa i la visquin com un espai d'oci, esport i trobada, i fomentar-ne la participació a través de les xarxes socials.",
+        es: 'Hacer que los jóvenes de 13 a 17 años descubran la Devesa y la vivan como un espacio de ocio, deporte y encuentro, y fomentar su participación a través de las redes sociales.',
+        en: 'To get 13–17-year-olds to discover the Devesa and enjoy it as a place for leisure, sport and meeting up, and to encourage them to take part through social media.'
+      },
+      concepte: {
+        ca: "«Devesa't»: una marca pròpia amb identitat visual jove i tres reptes al parc (Girocatching, Art de Nadal i Mems), amb classificació en directe, premis, stories interactives, col·laboracions amb creadors de contingut, un pòdcast i una entrevista a la televisió.",
+        es: '«Devesa\'t»: una marca propia con identidad visual joven y tres retos en el parque (Girocatching, Art de Nadal y Mems), con clasificación en directo, premios, stories interactivas, colaboraciones con creadores de contenido, un pódcast y una entrevista en televisión.',
+        en: '“Devesa’t”: our own brand with a youthful visual identity and three challenges in the park (Girocatching, Christmas Art and Memes), with a live leaderboard, prizes, interactive stories, collaborations with content creators, a podcast and a TV interview.'
+      },
+      contribucio: ''   // ✏️ explica què vas fer tu en aquest projecte
     },
     {
       titol: { ca: 'Projecte acadèmic 6', es: 'Proyecto académico 6', en: 'Academic project 6' },
