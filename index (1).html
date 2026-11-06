@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teia Turon Dalí · Advertising Student</title>
+  <meta name="description" content="Portfoli i currículum de Teia Turon Dalí, estudiant de Publicitat i Relacions Públiques.">
+  <meta name="theme-color" content="#FCE9AB">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVEGACIÓ -->
+  <header class="nav">
+    <a class="nav__logo" href="#inici" aria-label="Inici">TTD</a>
+    <nav class="nav__links" aria-label="Seccions">
+      <a href="#sobre-mi">Sobre mi</a>
+      <a href="#projectes">Projectes</a>
+      <a href="#contacte">Parlem?</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1. INICI -->
+    <section class="hero" id="inici">
+      <span class="sticker s1" data-depth="30" aria-hidden="true">✨</span>
+      <span class="sticker s2" data-depth="-40" aria-hidden="true">📣</span>
+      <span class="sticker s3" data-depth="25" aria-hidden="true">💡</span>
+      <span class="sticker s4" data-depth="-30" aria-hidden="true">🎬</span>
+      <span class="sticker s5" data-depth="45" aria-hidden="true">⭐</span>
+      <span class="bubble" aria-hidden="true">creativa · estratègica · curiosa</span>
+
+      <div class="window hero__window">
+        <div class="window__bar">
+          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="window__url">www.teiaturondali.com</span>
+        </div>
+
+        <div class="hero__body">
+          <div class="hero__text">
+            <h1 class="name" id="name" aria-label="Teia Turon Dalí">
+              <span class="name__line">Teia</span>
+              <span class="name__line">Turon</span>
+              <span class="name__line name__hl">Dalí</span>
+            </h1>
+            <p class="role"><span>Advertising Student</span></p>
+            <a class="btn btn--cv" href="assets/CV-Teia-Turon-Dali.pdf" download>
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Descarrega't el meu CV
+            </a>
+          </div>
+
+          <!-- Foto: passa el punter (o toca en mòbil) per veure la foto de petita -->
+          <button class="photo" id="photo" type="button" aria-label="Foto de la Teia. Passa-hi per sobre o toca per veure una foto de quan era petita">
+            <span class="photo__frame">
+              <span class="photo__ph">📷<small>Posa aquí la teva foto</small></span>
+              <img class="photo__img photo__img--now" src="assets/teia-ara.jpg" alt="Teia Turon Dalí" onerror="this.style.display='none'">
+              <img class="photo__img photo__img--kid" src="assets/teia-petita.jpg" alt="Teia de petita" onerror="this.style.display='none'">
+            </span>
+            <span class="photo__label">teia.jpg</span>
+            <span class="photo__hint">toca'm 👀</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CINTA -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Branding ✺ Estratègia ✺ Social Media ✺ Relacions Públiques ✺ Copywriting ✺ Creativitat ✺ Campanyes ✺ </span>
+        <span>Branding ✺ Estratègia ✺ Social Media ✺ Relacions Públiques ✺ Copywriting ✺ Creativitat ✺ Campanyes ✺ </span>
+      </div>
+    </div>
+
+    <!-- 2. SOBRE MI -->
+    <section class="about" id="sobre-mi">
+      <div class="window about__window reveal">
+        <div class="window__bar window__bar--blush">
+          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="window__url">sobre-mi.txt</span>
+        </div>
+        <div class="about__body">
+          <h2 class="title">Hola, sóc la <mark>Teia</mark> 👋</h2>
+          <p>
+            <!-- ✏️ Substitueix aquest text pel teu -->
+            Estudio Publicitat i Relacions Públiques i m'encanta convertir idees en històries que la gent recorda.
+            Em mou la curiositat, la creativitat i les ganes d'aprendre de cada projecte. Aquí trobaràs una mica del que
+            he fet fins ara i del que vull arribar a fer.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. PROJECTES -->
+    <section class="projects" id="projectes">
+      <h2 class="title title--center reveal">Els meus <mark>projectes</mark></h2>
+      <p class="projects__intro reveal">Passa el punter per sobre dels vídeos per veure'ls. Clica per pausar.</p>
+
+      <div class="projects__grid">
+
+        <!-- PROFESSIONALS -->
+        <article class="window project project--pro reveal" style="--d:0s">
+          <div class="window__bar window__bar--tomato">
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="window__url">professionals/</span>
+          </div>
+          <div class="project__body">
+            <h3 class="project__title">Professionals</h3>
+            <p class="project__text">Treballs i col·laboracions reals. <!-- ✏️ Descriu-ho --></p>
+
+            <div class="carousel" data-carousel aria-roledescription="carrusel" aria-label="Projectes professionals">
+              <div class="carousel__viewport">
+                <div class="carousel__track">
+                  <!-- Imatge: <figure class="slide"><img src="assets/pro/projecte1.jpg" alt="Descripció"></figure> -->
+                  <!-- Vídeo:  <figure class="slide slide--video"><video muted loop playsinline preload="metadata" poster="assets/pro/poster1.jpg"><source src="assets/pro/video1.mp4" type="video/mp4"></video><span class="play-badge" aria-hidden="true"></span></figure> -->
+                  <figure class="slide"><div class="ph ph--a">Imatge 1</div></figure>
+                  <figure class="slide"><div class="ph ph--b">Imatge 2</div></figure>
+                  <figure class="slide"><div class="ph ph--c">Vídeo 1</div></figure>
+                </div>
+              </div>
+              <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Anterior">‹</button>
+              <button class="carousel__btn carousel__btn--next" type="button" aria-label="Següent">›</button>
+              <div class="carousel__dots" role="tablist"></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ACADÈMICS -->
+        <article class="window project project--aca reveal" style="--d:.15s">
+          <div class="window__bar window__bar--olive">
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="window__url">academics/</span>
+          </div>
+          <div class="project__body">
+            <h3 class="project__title">Acadèmics</h3>
+            <p class="project__text">Projectes fets durant la carrera. <!-- ✏️ Descriu-ho --></p>
+
+            <div class="carousel" data-carousel aria-roledescription="carrusel" aria-label="Projectes acadèmics">
+              <div class="carousel__viewport">
+                <div class="carousel__track">
+                  <figure class="slide"><div class="ph ph--d">Imatge 1</div></figure>
+                  <figure class="slide"><div class="ph ph--e">Imatge 2</div></figure>
+                  <figure class="slide"><div class="ph ph--a">Vídeo 1</div></figure>
+                </div>
+              </div>
+              <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Anterior">‹</button>
+              <button class="carousel__btn carousel__btn--next" type="button" aria-label="Següent">›</button>
+              <div class="carousel__dots" role="tablist"></div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 4. PARLEM? -->
+    <section class="contact" id="contacte">
+      <h2 class="title title--center title--light reveal">Parlem<mark>?</mark></h2>
+
+      <div class="window contact__window reveal">
+        <div class="window__bar window__bar--orange">
+          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="window__url">Nou missatge</span>
+        </div>
+        <div class="contact__body">
+          <p class="contact__lead">Tens una idea, una oferta o només vols saludar? Escriu-me!</p>
+          <ul class="contact__list">
+            <!-- ✏️ Canvia les dades -->
+            <li><span>Correu</span><a href="mailto:teia@exemple.com">teia@exemple.com</a></li>
+            <li><span>Telèfon</span><a href="tel:+34600000000">+34 600 00 00 00</a></li>
+            <li><span>Ubicació</span><b>Catalunya</b></li>
+          </ul>
+          <a class="btn btn--mail" href="mailto:teia@exemple.com">Envia'm un correu ✉️</a>
+        </div>
+      </div>
+
+      <!-- DOCK -->
+      <nav class="dock" aria-label="Xarxes socials">
+        <a href="mailto:teia@exemple.com" aria-label="Correu" title="Correu">
+          <svg viewBox="0 0 24 24"><path d="M3 6h18v12H3z M3 7l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M4 9h4v11H4z M6 4a2 2 0 110 4 2 2 0 010-4z M10 9h4v1.6c.6-1 1.8-1.9 3.5-1.9 3 0 3.5 2 3.5 4.6V20h-4v-6c0-1.4-.2-2.4-1.600-2.400S14 12.600 14 14v6h-4z" fill="currentColor"/></svg>
+        </a>
+      </nav>
+    </section>
+  </main>
+
+  <footer class="footer">© <span id="year"></span> Teia Turon Dalí · Fet amb molta creativitat ✺</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
