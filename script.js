@@ -57,6 +57,9 @@ const I18N = {
   }
 };
 
+/* ✏️ Arxius del currículum */
+const CV = { ca: 'assets/cv/CV-Teia-Turon-CA.pdf', en: 'assets/cv/CV-Teia-Turon-EN.pdf' };
+
 let lang = 'ca';
 try { lang = localStorage.getItem('lang') || 'ca'; } catch (e) {}
 if (!I18N[lang]) lang = 'ca';
@@ -72,6 +75,8 @@ function applyLang() {
   document.querySelectorAll('[data-i18n-aria]').forEach(el => el.setAttribute('aria-label', t(el.dataset.i18nAria)));
   document.querySelectorAll('[data-i18n-title]').forEach(el => el.setAttribute('title', t(el.dataset.i18nTitle)));
   document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === lang));
+  // CV segons l'idioma (no hi ha versió en castellà: es mostra la catalana)
+  document.querySelectorAll('[data-cv]').forEach(a => { a.href = lang === 'en' ? CV.en : CV.ca; });
   updateCards();
   if (modal.current) fillModal(modal.current, modal.index);
 }

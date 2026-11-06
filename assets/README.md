@@ -3,7 +3,8 @@
 Aquí van tots els arxius que fa servir la web. Si poses els arxius amb **aquests noms exactes**, apareixen sols a la web.
 
 ## Currículum
-- `cv/CV-Teia-Turon.pdf` → el botó «Descarrega't el meu CV» i el botó «Veure el meu CV».
+- `cv/CV-Teia-Turon-CA.pdf` → CV en català (també es mostra amb la web en castellà).
+- `cv/CV-Teia-Turon-EN.pdf` → CV en anglès (amb la web en anglès).
 
 ## Fotos de la portada
 - `fotos/teia-petita.png` → la foto que es veu primer.
