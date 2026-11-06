@@ -5,7 +5,7 @@
   --vanilla: #FCE9AB;
   --orange: #FC8A2D;
   --sun: #F4C81C;      /* groc del sol de la portada */
-  --coral: #EC6A5E;    /* vermell clar de la secció Parlem? */
+  --coral: #F28B7D;    /* vermell clar de la secció Parlem? */
   --ink: #2b1a1c;
   --white: #fffdf6;
   --radius: 22px;
@@ -509,8 +509,6 @@ body.modal-open { overflow: hidden; }
 .contact {
   padding: 5rem 1.2rem 3rem; background: var(--coral);
   display: flex; flex-direction: column; align-items: center; gap: 2rem;
-  background-image: radial-gradient(circle at 90% 10%, var(--tomato) 0 90px, transparent 91px),
-                    radial-gradient(circle at 5% 90%, var(--sun) 0 110px, transparent 111px);
 }
 .contact .title { margin: 0; color: var(--ink); }
 .contact .title mark { background: linear-gradient(transparent 55%, var(--sun) 55%); padding: 0 .15em; }
