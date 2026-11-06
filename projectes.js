@@ -138,16 +138,39 @@ const PROJECTES = {
       contribucio: ''   // ✏️ explica què vas fer tu en aquest projecte
     },
     {
-      titol: { ca: 'Projecte acadèmic 4', es: 'Proyecto académico 4', en: 'Academic project 4' },
-      categoria: { ca: '[Categoria]', es: '[Categoría]', en: '[Category]' },
-      any: '[Any]',
+      titol: 'Visit West Pomerania',
+      categoria: { ca: 'Campanya digital · COIL', es: 'Campaña digital · COIL', en: 'Digital campaign · COIL' },
+      any: '2024-25',
       carpeta: 'assets/projectes/academics/projecte-4/',
       portada: 'portada.jpg',
-      galeria: ['1.jpg', '2.jpg', '3.jpg'],
-      descripcio:  { ca: '[Explicació breu del projecte]', es: '[Explicación breve del proyecto]', en: '[Short description of the project]' },
-      objectiu:    { ca: '[Objectiu del projecte]', es: '[Objetivo del proyecto]', en: '[Project goal]' },
-      concepte:    { ca: '[Concepte creatiu]', es: '[Concepto creativo]', en: '[Creative concept]' },
-      contribucio: { ca: '[La meva contribució]', es: '[Mi contribución]', en: '[My contribution]' }
+      document: {
+        fitxer: 'campanya-pomerania.pdf',
+        text: { ca: 'Veure la presentació', es: 'Ver la presentación', en: 'View the presentation' }
+      },
+      galeria: [
+        'diapo-01.jpg', 'diapo-02.jpg', 'diapo-03.jpg', 'diapo-04.jpg', 'diapo-05.jpg', 'diapo-06.jpg', 'diapo-07.jpg',
+        'diapo-08.jpg', 'diapo-09.jpg', 'diapo-10.jpg', 'diapo-11.jpg', 'diapo-12.jpg', 'diapo-13.jpg'
+      ],
+      descripcio: {
+        ca: "Projecte COIL (Collaborative Online International Learning) entre la Universitat de Girona i la Universitat de Szczecin, a Polònia. Vam desenvolupar una campanya digital per donar a conèixer la regió de Pomerània Occidental com a destinació turística.",
+        es: 'Proyecto COIL (Collaborative Online International Learning) entre la Universitat de Girona y la Universidad de Szczecin, en Polonia. Desarrollamos una campaña digital para dar a conocer la región de Pomerania Occidental como destino turístico.',
+        en: 'A COIL (Collaborative Online International Learning) project between the University of Girona and the University of Szczecin in Poland. We developed a digital campaign to promote West Pomerania as a tourist destination.'
+      },
+      objectiu: {
+        ca: "Fer visible la Pomerània Occidental, que gairebé no apareix a Google, i atreure turistes d'Itàlia, Espanya i França amb la seva natura, arquitectura, cultura i paisatges.",
+        es: 'Dar visibilidad a Pomerania Occidental, que casi no aparece en Google, y atraer turistas de Italia, España y Francia con su naturaleza, arquitectura, cultura y paisajes.',
+        en: 'To make West Pomerania visible (it barely shows up on Google) and attract tourists from Italy, Spain and France with its nature, architecture, culture and landscapes.'
+      },
+      concepte: {
+        ca: "«Explore Pomerania»: una estratègia digital completa amb millores SEO al web Visit Pomerania, anuncis de Google Ads, una landing page traduïda, newsletters per a cada mercat, contingut per a Instagram, Facebook i TikTok i col·laboracions amb influencers de viatges.",
+        es: '«Explore Pomerania»: una estrategia digital completa con mejoras SEO en la web Visit Pomerania, anuncios de Google Ads, una landing page traducida, newsletters para cada mercado, contenido para Instagram, Facebook y TikTok y colaboraciones con influencers de viajes.',
+        en: '“Explore Pomerania”: a complete digital strategy with SEO improvements to the Visit Pomerania website, Google Ads, a translated landing page, newsletters for each market, content for Instagram, Facebook and TikTok, and partnerships with travel influencers.'
+      },
+      contribucio: {
+        ca: "Amb la Marina Sánchez, per part de la UdG, vam fer la recerca prèvia, la definició dels públics objectiu, les accions digitals (SEO, SEM, xarxes socials i email màrqueting), el pressupost, el calendari i els KPI. Les estudiants de Szczecin van aportar les activitats i atraccions de la regió.",
+        es: 'Con Marina Sánchez, por parte de la UdG, hicimos la investigación previa, la definición de los públicos objetivo, las acciones digitales (SEO, SEM, redes sociales y email marketing), el presupuesto, el calendario y los KPI. Las estudiantes de Szczecin aportaron las actividades y atracciones de la región.',
+        en: 'Together with Marina Sánchez, on behalf of the UdG, I carried out the preliminary research, defined the target audiences and planned the digital actions (SEO, SEM, social media and email marketing), the budget, the calendar and the KPIs. The Szczecin students contributed the region’s activities and attractions.'
+      }
     },
     {
       titol: { ca: 'Projecte acadèmic 5', es: 'Proyecto académico 5', en: 'Academic project 5' },
