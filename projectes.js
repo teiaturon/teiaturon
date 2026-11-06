@@ -229,6 +229,8 @@ const PROJECTES = {
       any: '2025-26',
       carpeta: 'assets/projectes/academics/projecte-6/',
       portada: 'portada.jpg',
+      sencera: true,          // la imatge de la targeta es veu sencera, sense retallar
+      fons: '#ffffff',
       document: {
         fitxer: 'presentacio-siena.pdf',
         text: { ca: 'Veure la presentació', es: 'Ver la presentación', en: 'View the presentation' }

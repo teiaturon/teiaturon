@@ -280,8 +280,10 @@ mark { background: none; color: inherit; }
 .pgrid--aca { grid-template-columns: repeat(5, 1fr); }
 .pgrid--aca .pcard { grid-column: span 2; min-height: 220px; }
 /* La targeta ampla de cada fila marca l'alçada; la del costat s'hi ajusta */
-.pgrid--aca .pcard:nth-child(4n+1),
-.pgrid--aca .pcard:nth-child(4n+4) { grid-column: span 3; aspect-ratio: 1.9; }
+/* Targetes amples: 1a fila a l'esquerra; 2a i 3a fila a la dreta (Girocleta i Jens es veuen sencers) */
+.pgrid--aca .pcard:nth-child(6n+1),
+.pgrid--aca .pcard:nth-child(6n+4),
+.pgrid--aca .pcard:nth-child(6n+6) { grid-column: span 3; aspect-ratio: 1.9; }
 /* Targetes que mostren la imatge sencera: el marc pren la proporció de la imatge */
 .pgrid--aca .pcard.pcard--fit, .pgrid--pro .pcard.pcard--fit { aspect-ratio: var(--ar); }
 
