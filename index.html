@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Teia Turon Dalí · Advertising Student</title>
-  <meta name="description" content="Portfoli i currículum de Teia Turon Dalí, estudiant de Publicitat i Relacions Públiques.">
+  <title>Teia Turon · Advertising Student</title>
+  <meta name="description" content="Portfoli i currículum de Teia Turon, estudiant de Publicitat i Relacions Públiques.">
   <meta name="theme-color" content="#FCE9AB">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +40,7 @@
       <div class="window hero__window">
         <div class="window__bar">
           <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span class="window__url">www.teiaturondali.com</span>
+          <span class="window__url">www.teiaturon.com</span>
         </div>
 
         <div class="hero__body">
@@ -49,17 +49,17 @@
               <span class="name__line">Teia</span>
               <span class="name__line name__hl">Turon</span>
             </h1>
-            <p class="role"><span>Advertising Student</span></p>
-            <a class="btn btn--cv" href="assets/cv/CV-Teia-Turon-CA.pdf" data-cv download>
-              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span data-i18n="hero.cv">Descarrega't el meu CV</span>
+            <p class="role"><span data-i18n="hero.role">Estudiant de Publicitat i Relacions Públiques</span></p>
+            <a class="btn btn--cv" href="assets/cv/CV-Teia-Turon-CA.pdf" data-cv target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span data-i18n="hero.cv">Obre el meu CV</span>
             </a>
           </div>
 
-          <!-- Foto: passa el punter (o toca en mòbil) per veure la Teia d'ara -->
-          <button class="photo" id="photo" type="button" data-i18n-aria="hero.photoAria" aria-label="Foto de la Teia de petita. Passa-hi per sobre o toca per veure-la ara">
-            <img class="photo__img photo__img--kid" src="assets/fotos/teia-petita.png" alt="" width="800" height="792">
-            <img class="photo__img photo__img--now" src="assets/fotos/teia-ara.png" alt="" width="800" height="792">
+          <!-- Foto: passa el punter (o toca en mòbil) per veure la Teia de petita -->
+          <button class="photo" id="photo" type="button" data-i18n-aria="hero.photoAria" aria-label="Foto de la Teia. Passa-hi per sobre o toca per veure-la de petita">
+            <img class="photo__img photo__img--front" src="assets/fotos/teia-ara.png" alt="" width="800" height="792">
+            <img class="photo__img photo__img--back" src="assets/fotos/teia-petita.png" alt="" width="800" height="792">
           </button>
         </div>
       </div>
@@ -82,12 +82,16 @@
         </div>
         <div class="about__body">
           <h2 class="title" data-i18n-html="about.title">Hola, sóc la <mark>Teia</mark> 👋</h2>
-          <!-- ✏️ Substitueix aquest text pel teu (i les traduccions a script.js) -->
-          <p data-i18n="about.text">
-            Estudio Publicitat i Relacions Públiques i m'encanta convertir idees en històries que la gent recorda.
-            Em mou la curiositat, la creativitat i les ganes d'aprendre de cada projecte. Aquí trobaràs una mica del que
-            he fet fins ara i del que vull arribar a fer.
-          </p>
+          <!-- ✏️ El text de "Sobre mi" i les seves traduccions són a script.js (about.text) -->
+          <div class="about__text" id="about-text" data-i18n-html="about.text"></div>
+          <ul class="skills" aria-label="Habilitats" data-i18n-aria="about.skills">
+            <li data-i18n="skill.creativity">Creativitat</li>
+            <li>Content Creation</li>
+            <li>Social Media</li>
+            <li>Public Speaking</li>
+            <li>Adaptability</li>
+            <li>Teamwork</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -117,10 +121,11 @@
           <span class="window__url" data-i18n="contact.window">Nou missatge</span>
         </div>
         <div class="contact__body">
-          <p class="contact__lead" data-i18n="contact.lead">Tens una idea, una oferta o només vols saludar? Escriu-me!</p>
+          <p class="contact__lead" data-i18n="contact.lead">Si vols col·laborar amb mi o simplement dir-me hola, escriu-me per correu o per les meves xarxes!</p>
           <ul class="contact__list">
-            <!-- ✏️ Canvia les dades -->
-            <li><span data-i18n="contact.email">Correu</span><a href="mailto:teia@exemple.com">teia@exemple.com</a></li>
+            <li><span data-i18n="contact.email">Correu</span><a href="mailto:turonteia1@gmail.com">turonteia1@gmail.com</a></li>
+            <li><span>Instagram</span><a href="https://www.instagram.com/teiaturon/" target="_blank" rel="noopener">@teiaturon</a></li>
+            <li><span>LinkedIn</span><a href="https://www.linkedin.com/search/results/people/?keywords=Teia%20Turon" target="_blank" rel="noopener">Teia Turon</a></li>
           </ul>
           <a class="btn btn--mail" href="assets/cv/CV-Teia-Turon-CA.pdf" data-cv target="_blank" rel="noopener" data-i18n="contact.cv">Veure el meu CV 📄</a>
         </div>
@@ -128,20 +133,20 @@
 
       <!-- DOCK -->
       <nav class="dock" aria-label="Xarxes socials">
-        <a href="mailto:teia@exemple.com" aria-label="Correu" title="Correu" data-i18n-aria="contact.email" data-i18n-title="contact.email">
+        <a href="mailto:turonteia1@gmail.com" aria-label="Correu" title="Correu" data-i18n-aria="contact.email" data-i18n-title="contact.email">
           <svg viewBox="0 0 24 24"><path d="M3 6h18v12H3z M3 7l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
         </a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+        <a href="https://www.instagram.com/teiaturon/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
           <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
         </a>
-        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+        <a href="https://www.linkedin.com/search/results/people/?keywords=Teia%20Turon" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
           <svg viewBox="0 0 24 24"><path d="M4 9h4v11H4z M6 4a2 2 0 110 4 2 2 0 010-4z M10 9h4v1.6c.6-1 1.8-1.9 3.5-1.9 3 0 3.5 2 3.5 4.6V20h-4v-6c0-1.4-.2-2.4-1.600-2.400S14 12.600 14 14v6h-4z" fill="currentColor"/></svg>
         </a>
       </nav>
     </section>
   </main>
 
-  <footer class="footer">© <span id="year"></span> Teia Turon Dalí · <span data-i18n="footer">Fet amb molta creativitat</span> ✺</footer>
+  <footer class="footer">© <span id="year"></span> Teia Turon · <span data-i18n="footer">Fet amb molta creativitat</span> ✺</footer>
 
   <!-- FINESTRA MODAL DELS PROJECTES -->
   <div class="modal" id="modal" hidden>

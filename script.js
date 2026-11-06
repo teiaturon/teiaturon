@@ -5,53 +5,62 @@ document.getElementById('year').textContent = new Date().getFullYear();
    ✏️ Si canvies un text de la web, canvia'l aquí en els tres idiomes. */
 const I18N = {
   ca: {
+    'about.skills': "Habilitats",
+    'skill.creativity': "Creativitat",
+    'hero.role': "Estudiant de Publicitat i Relacions Públiques",
     'nav.about': 'Sobre mi', 'nav.projects': 'Projectes', 'nav.contact': 'Parlem?',
-    'hero.cv': "Descarrega't el meu CV",
-    'hero.photoAria': 'Foto de la Teia de petita. Passa-hi per sobre o toca per veure-la ara',
+    'hero.cv': "Obre el meu CV",
+    'hero.photoAria': "Foto de la Teia. Passa-hi per sobre o toca per veure-la de petita",
     'marquee': 'Branding ✺ Estratègia ✺ Social Media ✺ Relacions Públiques ✺ Copywriting ✺ Creativitat ✺ Campanyes ✺ ',
     'about.title': 'Hola, sóc la <mark>Teia</mark> 👋',
-    'about.text': "Estudio Publicitat i Relacions Públiques i m'encanta convertir idees en històries que la gent recorda. Em mou la curiositat, la creativitat i les ganes d'aprendre de cada projecte. Aquí trobaràs una mica del que he fet fins ara i del que vull arribar a fer.",
+    'about.text': "<p>Sí, ho has llegit bé, <strong>Teia</strong>: un nom poc habitual, curiós per a alguns i ple d'història — com jo.</p><p>Soc una <strong>futura creativa publicitària</strong>, amant de les idees que connecten i de les històries que deixen empremta. La comunicació és la meva zona de confort... però sortir-ne per explorar nous reptes encara més!</p><p>Perquè et facis una idea... he viscut als Estats Units i a Itàlia, he treballat en atenció al client, he fet de cangur, he actuat davant de càmeres, he estat model i he treballat a la ràdio... així que <strong>he après a dir «sí» a cada oportunitat</strong> que m'ajuda a créixer: des de treballar com a recepcionista en un càmping perdut enmig de la muntanya fins a protagonitzar <strong>una campanya publicitària difosa per tot Catalunya</strong>.</p><p>El meu objectiu? Comunicar amb <strong>propòsit, estil, impacte</strong> i <strong>no passar desapercebuda</strong>. <a href=\"#contacte\">Parlem?</a></p>",
     'projects.title': 'Els meus <mark>projectes</mark>',
     'projects.pro': 'Projectes professionals', 'projects.aca': 'Projectes acadèmics',
     'projects.open': 'Obrir el projecte', 'projects.placeholder': 'Imatge provisional', 'projects.image': 'Imatge',
     'modal.close': 'Tancar', 'modal.prev': 'Anterior', 'modal.next': 'Següent',
     'modal.goal': 'Objectiu', 'modal.concept': 'Concepte creatiu', 'modal.role': 'La meva contribució',
     'contact.title': 'Parlem<mark>?</mark>', 'contact.window': 'Nou missatge',
-    'contact.lead': 'Tens una idea, una oferta o només vols saludar? Escriu-me!',
+    'contact.lead': "Si vols col·laborar amb mi o simplement dir-me hola, escriu-me per correu o per les meves xarxes!",
     'contact.email': 'Correu', 'contact.cv': 'Veure el meu CV 📄',
     'footer': 'Fet amb molta creativitat'
   },
   es: {
+    'about.skills': "Habilidades",
+    'skill.creativity': "Creatividad",
+    'hero.role': "Estudiante de Publicidad y Relaciones Públicas",
     'nav.about': 'Sobre mí', 'nav.projects': 'Proyectos', 'nav.contact': '¿Hablamos?',
-    'hero.cv': 'Descarga mi CV',
-    'hero.photoAria': 'Foto de Teia de pequeña. Pasa el cursor por encima o toca para verla ahora',
+    'hero.cv': "Abre mi CV",
+    'hero.photoAria': "Foto de Teia. Pasa el cursor por encima o toca para verla de pequeña",
     'marquee': 'Branding ✺ Estrategia ✺ Social Media ✺ Relaciones Públicas ✺ Copywriting ✺ Creatividad ✺ Campañas ✺ ',
     'about.title': 'Hola, soy <mark>Teia</mark> 👋',
-    'about.text': 'Estudio Publicidad y Relaciones Públicas y me encanta convertir ideas en historias que la gente recuerda. Me mueven la curiosidad, la creatividad y las ganas de aprender de cada proyecto. Aquí encontrarás un poco de lo que he hecho hasta ahora y de lo que quiero llegar a hacer.',
+    'about.text': "<p>Sí, lo has leído bien, <strong>Teia</strong>: un nombre poco habitual, curioso para algunos y lleno de historia — como yo.</p><p>Soy una <strong>futura creativa publicitaria</strong>, amante de las ideas que conectan y de las historias que dejan huella. La comunicación es mi zona de confort... ¡pero salir de ella para explorar nuevos retos todavía más!</p><p>Para que te hagas una idea... he vivido en Estados Unidos y en Italia, he trabajado en atención al cliente, he hecho de canguro, he actuado delante de cámaras, he sido modelo y he trabajado en la radio... así que <strong>he aprendido a decir «sí» a cada oportunidad</strong> que me ayuda a crecer: desde trabajar como recepcionista en un camping perdido en medio de la montaña hasta protagonizar <strong>una campaña publicitaria difundida por toda Cataluña</strong>.</p><p>¿Mi objetivo? Comunicar con <strong>propósito, estilo, impacto</strong> y <strong>no pasar desapercibida</strong>. <a href=\"#contacte\">¿Hablamos?</a></p>",
     'projects.title': 'Mis <mark>proyectos</mark>',
     'projects.pro': 'Proyectos profesionales', 'projects.aca': 'Proyectos académicos',
     'projects.open': 'Abrir el proyecto', 'projects.placeholder': 'Imagen provisional', 'projects.image': 'Imagen',
     'modal.close': 'Cerrar', 'modal.prev': 'Anterior', 'modal.next': 'Siguiente',
     'modal.goal': 'Objetivo', 'modal.concept': 'Concepto creativo', 'modal.role': 'Mi contribución',
     'contact.title': '¿Hablamos<mark>?</mark>', 'contact.window': 'Nuevo mensaje',
-    'contact.lead': '¿Tienes una idea, una oferta o solo quieres saludar? ¡Escríbeme!',
+    'contact.lead': "Si quieres colaborar conmigo o simplemente saludarme, ¡escríbeme por correo o por mis redes!",
     'contact.email': 'Correo', 'contact.cv': 'Ver mi CV 📄',
     'footer': 'Hecho con mucha creatividad'
   },
   en: {
+    'about.skills': "Skills",
+    'skill.creativity': "Creativity",
+    'hero.role': "Advertising & Public Relations Student",
     'nav.about': 'About me', 'nav.projects': 'Projects', 'nav.contact': "Let's talk",
-    'hero.cv': 'Download my CV',
-    'hero.photoAria': 'Photo of Teia as a child. Hover or tap to see her now',
+    'hero.cv': "Open my CV",
+    'hero.photoAria': "Photo of Teia. Hover or tap to see her as a child",
     'marquee': 'Branding ✺ Strategy ✺ Social Media ✺ Public Relations ✺ Copywriting ✺ Creativity ✺ Campaigns ✺ ',
     'about.title': "Hi, I'm <mark>Teia</mark> 👋",
-    'about.text': "I study Advertising and Public Relations and I love turning ideas into stories people remember. I'm driven by curiosity, creativity and the desire to learn from every project. Here you'll find a bit of what I've done so far and what I want to do next.",
+    'about.text': "<p>Yes, you read that right: <strong>Teia</strong>. An unusual name, curious to some and full of history — just like me.</p><p>I'm a <strong>future advertising creative</strong>, in love with ideas that connect and stories that leave a mark. Communication is my comfort zone... but stepping out of it to explore new challenges is even better!</p><p>To give you an idea... I've lived in the United States and Italy, worked in customer service, babysat, acted in front of the camera, modelled and worked in radio... so <strong>I've learned to say “yes” to every opportunity</strong> that helps me grow: from working as a receptionist at a campsite lost in the middle of the mountains to starring in <strong>an advertising campaign shown all over Catalonia</strong>.</p><p>My goal? To communicate with <strong>purpose, style and impact</strong> — and <strong>never go unnoticed</strong>. <a href=\"#contacte\">Let's talk?</a></p>",
     'projects.title': 'My <mark>projects</mark>',
     'projects.pro': 'Professional projects', 'projects.aca': 'Academic projects',
     'projects.open': 'Open project', 'projects.placeholder': 'Placeholder image', 'projects.image': 'Image',
     'modal.close': 'Close', 'modal.prev': 'Previous', 'modal.next': 'Next',
     'modal.goal': 'Goal', 'modal.concept': 'Creative concept', 'modal.role': 'My contribution',
     'contact.title': "Let's talk<mark>!</mark>", 'contact.window': 'New message',
-    'contact.lead': 'Got an idea, an offer or just want to say hi? Write to me!',
+    'contact.lead': "Want to collaborate or just say hi? Drop me an email or find me on social media!",
     'contact.email': 'Email', 'contact.cv': 'View my CV 📄',
     'footer': 'Made with lots of creativity'
   }
@@ -77,6 +86,7 @@ function applyLang() {
   document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === lang));
   // CV segons l'idioma (no hi ha versió en castellà: es mostra la catalana)
   document.querySelectorAll('[data-cv]').forEach(a => { a.href = lang === 'en' ? CV.en : CV.ca; });
+  splitAboutWords();
   updateCards();
   if (modal.current) fillModal(modal.current, modal.index);
 }
@@ -87,7 +97,7 @@ document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click
   applyLang();
 }));
 
-/* ============ NOM: WIGGLE PER LLETRA ============ */
+/* ============ NOM: WIGGLE SUAU (entra amb el cursor, surt en treure'l) ============ */
 (function () {
   const lines = document.querySelectorAll('.name__line');
   lines.forEach(line => {
@@ -102,27 +112,21 @@ document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click
     });
   });
   const name = document.getElementById('name');
-  const wiggle = el => {
-    el.classList.remove('wiggle');
-    void el.offsetWidth;            // reinicia l'animació
-    el.classList.add('wiggle');
-  };
-  const wiggleAll = () => {
-    name.querySelectorAll('.ch').forEach((ch, i) => setTimeout(() => wiggle(ch), i * 40));
-  };
-  let busy = false;
-  const trigger = () => {
-    if (busy) return;
-    busy = true;
-    wiggleAll();
-    setTimeout(() => (busy = false), 1100);
-  };
-  name.addEventListener('pointerenter', trigger);
-  name.addEventListener('click', trigger);       // mòbil: tocar
-  name.addEventListener('animationend', e => e.target.classList.remove('wiggle'));
+  const letters = [...name.querySelectorAll('.ch')];
+  const play = cls => letters.forEach((ch, i) => {
+    clearTimeout(ch._t);
+    ch._t = setTimeout(() => {
+      ch.classList.remove('wiggle-in', 'wiggle-out');
+      void ch.offsetWidth;            // reinicia l'animació
+      ch.classList.add(cls);
+    }, i * 30);
+  });
+  name.addEventListener('pointerenter', e => { if (e.pointerType !== 'touch') play('wiggle-in'); });
+  name.addEventListener('pointerleave', e => { if (e.pointerType !== 'touch') play('wiggle-out'); });
+  name.addEventListener('animationend', e => e.target.classList.remove('wiggle-in', 'wiggle-out'));
 })();
 
-/* ============ FOTO: CANVI A LA D'ARA (tàctil) ============ */
+/* ============ FOTO: CANVI A LA DE PETITA (tàctil) ============ */
 (function () {
   const photo = document.getElementById('photo');
   // En ordinadors ho fa el CSS amb :hover. En pantalles tàctils, es canvia en tocar.
@@ -357,6 +361,56 @@ document.addEventListener('keydown', e => {
     if (Math.abs(dx) > 40) showSlide(modal.index + (dx < 0 ? 1 : -1));
   });
 })();
+
+/* ============ SOBRE MI: EL TEXT ES VA ESCRIVINT EN BAIXAR ============ */
+const aboutText = document.getElementById('about-text');
+let aboutWords = [];
+
+function splitAboutWords() {
+  const walk = node => {
+    [...node.childNodes].forEach(n => {
+      if (n.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach(part => {
+          if (!part) return;
+          if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
+          const w = document.createElement('span');
+          w.className = 'w';
+          w.textContent = part;
+          frag.appendChild(w);
+        });
+        n.replaceWith(frag);
+      } else if (n.nodeType === 1) walk(n);
+    });
+  };
+  walk(aboutText);
+  aboutWords = [...aboutText.querySelectorAll('.w')];
+  updateAboutWords();
+}
+
+function updateAboutWords() {
+  if (!aboutWords.length) return;
+  const vh = window.innerHeight;
+  const r = aboutText.getBoundingClientRect();
+  const start = vh * .95;         // comença quan el text entra per baix
+  const end = vh * .8;            // acaba quan el final del text arriba al 80% de la pantalla
+  const p = Math.min(1, Math.max(0, (start - r.top) / (r.height + start - end)));
+  const n = Math.round(p * aboutWords.length);
+  aboutWords.forEach((w, i) => w.classList.toggle('on', i < n));
+  // Les paraules clau es subratllen quan ja s'han escrit
+  aboutText.querySelectorAll('strong').forEach(st => {
+    const ws = st.querySelectorAll('.w');
+    st.classList.toggle('on', ws.length > 0 && ws[ws.length - 1].classList.contains('on'));
+  });
+}
+
+let aboutTick = false;
+window.addEventListener('scroll', () => {
+  if (aboutTick) return;
+  aboutTick = true;
+  requestAnimationFrame(() => { aboutTick = false; updateAboutWords(); });
+}, { passive: true });
+window.addEventListener('resize', updateAboutWords);
 
 /* ============ IDIOMA INICIAL ============ */
 applyLang();
