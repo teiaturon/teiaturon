@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teia Turon Dalí · Advertising Student</title>
+  <meta name="description" content="Portfoli i currículum de Teia Turon Dalí, estudiant de Publicitat i Relacions Públiques.">
+  <meta name="theme-color" content="#FCE9AB">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVEGACIÓ -->
+  <header class="nav">
+    <a class="nav__logo" href="#inici" aria-label="Inici">TTD</a>
+    <nav class="nav__links" aria-label="Seccions">
+      <a href="#sobre-mi" data-i18n="nav.about">Sobre mi</a>
+      <a href="#projectes" data-i18n="nav.projects">Projectes</a>
+      <a href="#contacte" data-i18n="nav.contact">Parlem?</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="ca" aria-pressed="true">CA</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. INICI -->
+    <section class="hero" id="inici">
+      <span class="sticker s1" data-depth="30" aria-hidden="true">✨</span>
+      <span class="sticker s2" data-depth="-40" aria-hidden="true">📣</span>
+      <span class="sticker s3" data-depth="25" aria-hidden="true">💡</span>
+      <span class="sticker s4" data-depth="-30" aria-hidden="true">🎬</span>
+      <span class="sticker s5" data-depth="45" aria-hidden="true">⭐</span>
+
+      <div class="window hero__window">
+        <div class="window__bar">
+          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="window__url">www.teiaturondali.com</span>
+        </div>
+
+        <div class="hero__body">
+          <div class="hero__text">
+            <h1 class="name" id="name" aria-label="Teia Turon">
+              <span class="name__line">Teia</span>
+              <span class="name__line name__hl">Turon</span>
+            </h1>
+            <p class="role"><span>Advertising Student</span></p>
+            <a class="btn btn--cv" href="assets/cv/CV-Teia-Turon.pdf" download>
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span data-i18n="hero.cv">Descarrega't el meu CV</span>
+            </a>
+          </div>
+
+          <!-- Foto: passa el punter (o toca en mòbil) per veure la Teia d'ara -->
+          <button class="photo" id="photo" type="button" data-i18n-aria="hero.photoAria" aria-label="Foto de la Teia de petita. Passa-hi per sobre o toca per veure-la ara">
+            <img class="photo__img photo__img--kid" src="assets/fotos/teia-petita.png" alt="" width="800" height="792">
+            <img class="photo__img photo__img--now" src="assets/fotos/teia-ara.png" alt="" width="800" height="792">
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CINTA -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span data-i18n="marquee">Branding ✺ Estratègia ✺ Social Media ✺ Relacions Públiques ✺ Copywriting ✺ Creativitat ✺ Campanyes ✺ </span>
+        <span data-i18n="marquee">Branding ✺ Estratègia ✺ Social Media ✺ Relacions Públiques ✺ Copywriting ✺ Creativitat ✺ Campanyes ✺ </span>
+      </div>
+    </div>
+
+    <!-- 2. SOBRE MI -->
+    <section class="about" id="sobre-mi">
+      <div class="window about__window reveal">
+        <div class="window__bar window__bar--blush">
+          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="window__url">sobre-mi.txt</span>
+        </div>
+        <div class="about__body">
+          <h2 class="title" data-i18n-html="about.title">Hola, sóc la <mark>Teia</mark> 👋</h2>
+          <!-- ✏️ Substitueix aquest text pel teu (i les traduccions a script.js) -->
+          <p data-i18n="about.text">
+            Estudio Publicitat i Relacions Públiques i m'encanta convertir idees en històries que la gent recorda.
+            Em mou la curiositat, la creativitat i les ganes d'aprendre de cada projecte. Aquí trobaràs una mica del que
+            he fet fins ara i del que vull arribar a fer.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. PROJECTES (el contingut s'edita a projectes.js) -->
+    <section class="projects" id="projectes">
+      <h2 class="title title--center reveal" data-i18n-html="projects.title">Els meus <mark>projectes</mark></h2>
+
+      <div class="projects__group">
+        <h3 class="projects__label projects__label--pro reveal" data-i18n="projects.pro">Projectes professionals</h3>
+        <div class="pgrid pgrid--pro" id="grid-pro"></div>
+      </div>
+
+      <div class="projects__group">
+        <h3 class="projects__label projects__label--aca reveal" data-i18n="projects.aca">Projectes acadèmics</h3>
+        <div class="pgrid pgrid--aca" id="grid-aca"></div>
+      </div>
+    </section>
+
+    <!-- 4. PARLEM? -->
+    <section class="contact" id="contacte">
+      <h2 class="title title--center title--light reveal" data-i18n-html="contact.title">Parlem<mark>?</mark></h2>
+
+      <div class="window contact__window reveal">
+        <div class="window__bar window__bar--orange">
+          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="window__url" data-i18n="contact.window">Nou missatge</span>
+        </div>
+        <div class="contact__body">
+          <p class="contact__lead" data-i18n="contact.lead">Tens una idea, una oferta o només vols saludar? Escriu-me!</p>
+          <ul class="contact__list">
+            <!-- ✏️ Canvia les dades -->
+            <li><span data-i18n="contact.email">Correu</span><a href="mailto:teia@exemple.com">teia@exemple.com</a></li>
+          </ul>
+          <a class="btn btn--mail" href="assets/cv/CV-Teia-Turon.pdf" target="_blank" rel="noopener" data-i18n="contact.cv">Veure el meu CV 📄</a>
+        </div>
+      </div>
+
+      <!-- DOCK -->
+      <nav class="dock" aria-label="Xarxes socials">
+        <a href="mailto:teia@exemple.com" aria-label="Correu" title="Correu" data-i18n-aria="contact.email" data-i18n-title="contact.email">
+          <svg viewBox="0 0 24 24"><path d="M3 6h18v12H3z M3 7l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M4 9h4v11H4z M6 4a2 2 0 110 4 2 2 0 010-4z M10 9h4v1.6c.6-1 1.8-1.9 3.5-1.9 3 0 3.5 2 3.5 4.6V20h-4v-6c0-1.4-.2-2.4-1.600-2.400S14 12.600 14 14v6h-4z" fill="currentColor"/></svg>
+        </a>
+      </nav>
+    </section>
+  </main>
+
+  <footer class="footer">© <span id="year"></span> Teia Turon Dalí · <span data-i18n="footer">Fet amb molta creativitat</span> ✺</footer>
+
+  <!-- FINESTRA MODAL DELS PROJECTES -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="window modal__window" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="window__bar" id="modal-bar">
+        <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="window__url" id="modal-url"></span>
+        <button class="modal__close" type="button" data-close data-i18n-aria="modal.close" aria-label="Tancar">✕</button>
+      </div>
+      <div class="modal__body">
+        <header class="modal__head">
+          <h3 class="modal__title" id="modal-title"></h3>
+          <p class="modal__meta" id="modal-meta"></p>
+        </header>
+        <div class="gallery" id="gallery">
+          <div class="gallery__stage" id="gallery-stage"></div>
+          <button class="gallery__btn gallery__btn--prev" type="button" data-i18n-aria="modal.prev" aria-label="Anterior">‹</button>
+          <button class="gallery__btn gallery__btn--next" type="button" data-i18n-aria="modal.next" aria-label="Següent">›</button>
+          <div class="gallery__thumbs" id="gallery-thumbs"></div>
+        </div>
+        <div class="modal__text" id="modal-text"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="projectes.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
