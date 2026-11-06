@@ -8,6 +8,7 @@
    - Si una imatge encara no existeix, la web mostra un requadre provisional.
    - "enfoc" (opcional): quina part de la portada es veu a la targeta,
      per exemple 'center top' (dalt), 'center' (mig) o 'center bottom' (baix).
+   - "document" (opcional): un PDF que s'obre en una pestanya nova des de la finestra del projecte.
    ===================================================================== */
 
 const PROJECTES = {
@@ -49,6 +50,10 @@ const PROJECTES = {
       carpeta: 'assets/projectes/academics/projecte-1/',
       portada: 'portada.jpg',
       enfoc: 'center 45%',   // quina part de la portada es veu a la targeta
+      document: {             // botó per obrir un PDF del projecte
+        fitxer: 'revista-urban-fabrics.pdf',
+        text: { ca: 'Llegeix la revista', es: 'Lee la revista', en: 'Read the magazine' }
+      },
       galeria: [
         'revista-1.jpg', 'revista-2.jpg', 'revista-3.jpg', 'revista-4.jpg', 'revista-5.jpg', 'revista-6.jpg', 'revista-7.jpg',
         'making-of-1.jpg', 'making-of-2.jpg', 'making-of-3.jpg', 'making-of-4.jpg', 'making-of-5.jpg'

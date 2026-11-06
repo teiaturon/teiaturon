@@ -5,6 +5,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
    ✏️ Si canvies un text de la web, canvia'l aquí en els tres idiomes. */
 const I18N = {
   ca: {
+    'modal.pdf': 'Obre el PDF',
     'nav.home': 'Inici',
     'about.skills': "Habilitats",
     'skill.creativity': "Creativitat",
@@ -26,6 +27,7 @@ const I18N = {
     'footer': 'Fet amb molta creativitat'
   },
   es: {
+    'modal.pdf': 'Abre el PDF',
     'nav.home': 'Inicio',
     'about.skills': "Habilidades",
     'skill.creativity': "Creatividad",
@@ -47,6 +49,7 @@ const I18N = {
     'footer': 'Hecho con mucha creatividad'
   },
   en: {
+    'modal.pdf': 'Open the PDF',
     'nav.home': 'Home',
     'about.skills': "Skills",
     'skill.creativity': "Creativity",
@@ -254,6 +257,14 @@ function fillModal(p, index = 0) {
   modal.url.textContent = p.carpeta.replace(/^assets\/projectes\//, '').replace(/\/$/, '');
   modal.title.textContent = tx(p.titol);
   modal.meta.textContent = [tx(p.categoria), tx(p.any)].filter(Boolean).join(' · ');
+
+  // Botó per obrir el PDF del projecte (si n'hi ha)
+  const doc = document.getElementById('modal-doc');
+  doc.hidden = !p.document;
+  if (p.document) {
+    doc.href = p.carpeta + p.document.fitxer;
+    document.getElementById('modal-doc-text').textContent = tx(p.document.text) || t('modal.pdf');
+  }
 
   // Galeria
   const items = (p.galeria && p.galeria.length ? p.galeria : ['', '', '']);

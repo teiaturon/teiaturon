@@ -368,7 +368,17 @@ mark { background: none; color: inherit; }
 }
 .modal__close:hover, .modal__close:focus-visible { background: var(--rose); color: #fff; transform: rotate(90deg); outline: none; }
 .modal__body { overflow-y: auto; overscroll-behavior: contain; padding: clamp(1.1rem, 3vw, 2rem); }
-.modal__head { margin-bottom: 1.2rem; }
+.modal__head {
+  margin-bottom: 1.2rem; display: grid; grid-template-columns: 1fr auto; column-gap: 1rem; align-items: center;
+}
+.modal__head .modal__title, .modal__head .modal__meta { grid-column: 1; }
+.modal__head .modal__meta { justify-self: start; }
+.btn--doc { grid-column: 2; grid-row: 1 / span 2; background: var(--tomato); color: var(--vanilla); font-size: .95rem; padding: .7rem 1.2rem; }
+.btn--doc[hidden] { display: none; }
+@media (max-width: 600px) {
+  .modal__head { grid-template-columns: 1fr; }
+  .btn--doc { grid-column: 1; grid-row: auto; justify-self: start; margin-top: 1rem; }
+}
 .modal__title { margin: 0; font-weight: 800; font-size: clamp(1.6rem, 4vw, 2.5rem); line-height: 1.05; letter-spacing: -.02em; }
 .modal__meta {
   display: inline-block; margin: .6rem 0 0; font-size: .8rem; font-weight: 600;
