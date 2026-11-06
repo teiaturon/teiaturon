@@ -224,16 +224,39 @@ const PROJECTES = {
       contribucio: ''   // ✏️ explica què vas fer tu en aquest projecte
     },
     {
-      titol: { ca: 'Projecte acadèmic 6', es: 'Proyecto académico 6', en: 'Academic project 6' },
-      categoria: { ca: '[Categoria]', es: '[Categoría]', en: '[Category]' },
-      any: '[Any]',
+      titol: { ca: 'Jens · Assistent virtual', es: 'Jens · Asistente virtual', en: 'Jens · Virtual assistant' },
+      categoria: { ca: 'Design Thinking · Erasmus a Siena', es: 'Design Thinking · Erasmus en Siena', en: 'Design Thinking · Erasmus in Siena' },
+      any: '2025-26',
       carpeta: 'assets/projectes/academics/projecte-6/',
       portada: 'portada.jpg',
-      galeria: ['1.jpg', '2.jpg', '3.jpg'],
-      descripcio:  { ca: '[Explicació breu del projecte]', es: '[Explicación breve del proyecto]', en: '[Short description of the project]' },
-      objectiu:    { ca: '[Objectiu del projecte]', es: '[Objetivo del proyecto]', en: '[Project goal]' },
-      concepte:    { ca: '[Concepte creatiu]', es: '[Concepto creativo]', en: '[Creative concept]' },
-      contribucio: { ca: '[La meva contribució]', es: '[Mi contribución]', en: '[My contribution]' }
+      document: {
+        fitxer: 'presentacio-siena.pdf',
+        text: { ca: 'Veure la presentació', es: 'Ver la presentación', en: 'View the presentation' }
+      },
+      galeria: [
+        'diapo-01.jpg', 'diapo-02.jpg', 'diapo-03.jpg', 'diapo-04.jpg', 'diapo-05.jpg', 'diapo-06.jpg',
+        'diapo-07.jpg', 'diapo-08.jpg', 'diapo-09.jpg', 'diapo-10.jpg', 'diapo-11.jpg', 'diapo-12.jpg'
+      ],
+      descripcio: {
+        ca: "Projecte de Design Thinking fet durant el meu Erasmus a la Universitat de Siena, juntament amb estudiants italians. Vam desenvolupar Jens, un assistent virtual que ajuda els estudiants internacionals a comunicar-se en italià al menjador universitari.",
+        es: 'Proyecto de Design Thinking realizado durante mi Erasmus en la Universidad de Siena, junto con estudiantes italianos. Desarrollamos Jens, un asistente virtual que ayuda a los estudiantes internacionales a comunicarse en italiano en el comedor universitario.',
+        en: 'A Design Thinking project carried out during my Erasmus at the University of Siena, together with Italian students. We developed Jens, a virtual assistant that helps international students communicate in Italian at the university canteen.'
+      },
+      objectiu: {
+        ca: "Convertir el menjador universitari en un espai inclusiu i intercultural, reduint les barreres lingüístiques i l'aïllament que viuen els estudiants internacionals.",
+        es: 'Convertir el comedor universitario en un espacio inclusivo e intercultural, reduciendo las barreras lingüísticas y el aislamiento que viven los estudiantes internacionales.',
+        en: 'To turn the university canteen into an inclusive, intercultural space by reducing the language barriers and isolation international students face.'
+      },
+      concepte: {
+        ca: "Jens, «el teu company de llengua»: un humà digital amb xat i veu que tradueix en temps real, explica menús, ingredients i al·lèrgens, fa de mediador cultural i anima a aprendre italià cada dia. No substitueix el personal, sinó que l'acompanya.",
+        es: 'Jens, «tu compañero de idioma»: un humano digital con chat y voz que traduce en tiempo real, explica menús, ingredientes y alérgenos, hace de mediador cultural y anima a aprender italiano cada día. No sustituye al personal, sino que lo acompaña.',
+        en: 'Jens, “your local language buddy”: a digital human with chat and voice that translates in real time, explains menus, ingredients and allergens, acts as a cultural mediator and encourages daily Italian learning. It supports staff rather than replacing them.'
+      },
+      contribucio: {
+        ca: "Vaig formar part de l'equip de quatre persones en totes les fases del procés de Design Thinking: recerca (shadowing, service safari, cultural probes), definició dels usuaris, ideació, prototip de Jens i test amb vuit usuaris.",
+        es: 'Formé parte del equipo de cuatro personas en todas las fases del proceso de Design Thinking: investigación (shadowing, service safari, cultural probes), definición de los usuarios, ideación, prototipo de Jens y test con ocho usuarios.',
+        en: 'I was part of the four-person team through every stage of the Design Thinking process: research (shadowing, service safari, cultural probes), defining users, ideation, prototyping Jens and testing it with eight users.'
+      }
     }
   ]
 };
