@@ -129,35 +129,6 @@ const PROJECTES = {
       }
     },
     {
-      titol: 'Girocleta',
-      categoria: { ca: 'Campanya gràfica', es: 'Campaña gráfica', en: 'Print campaign' },
-      any: '2025',
-      carpeta: 'assets/projectes/academics/projecte-3/',
-      portada: 'campanya-1.jpg',
-      sencera: true,          // la imatge de la targeta es veu sencera, sense retallar
-      fons: '#ffffff',        // color del marc al voltant de la imatge
-      galeria: [
-        'campanya-1.jpg', 'campanya-2.jpg',
-        'cartell-1.jpg', 'cartell-2.jpg', 'cartell-3.jpg', 'cartell-4.jpg', 'cartell-5.jpg', 'cartell-6.jpg'
-      ],
-      descripcio: {
-        ca: "Campanya fictícia per a la Girocleta, el servei de bicicleta compartida de Girona. Dues línies de cartells que conviden a deixar les excuses i a moure's per la ciutat en bici.",
-        es: 'Campaña ficticia para la Girocleta, el servicio de bicicleta compartida de Girona. Dos líneas de carteles que invitan a dejar las excusas y a moverse por la ciudad en bici.',
-        en: 'A fictional campaign for Girocleta, the bike-sharing service in Girona. Two poster series that invite people to drop the excuses and get around the city by bike.'
-      },
-      objectiu: {
-        ca: "Animar la gent de Girona a fer servir la Girocleta per moure's per la ciutat.",
-        es: 'Animar a la gente de Girona a usar la Girocleta para moverse por la ciudad.',
-        en: 'To encourage people in Girona to use Girocleta to get around the city.'
-      },
-      concepte: {
-        ca: "Dues línies: «No vinguis amb excuses, vine amb Girocleta!», que respon amb humor a les excuses de cada dia per no venir, i una sèrie que compara Girona amb grans ciutats («A Nova York toquen el clàxon, a Girona, la campaneta»).",
-        es: 'Dos líneas: «No vinguis amb excuses, vine amb Girocleta!», que responde con humor a las excusas de cada día para no venir, y una serie que compara Girona con grandes ciudades («A Nova York toquen el clàxon, a Girona, la campaneta»).',
-        en: 'Two series: “No vinguis amb excuses, vine amb Girocleta!” (“No excuses, come by Girocleta!”), which answers everyday excuses with humour, and a series comparing Girona with big cities (“In New York they honk the horn, in Girona, the bike bell”).'
-      },
-      contribucio: ''   // ✏️ explica què vas fer tu en aquest projecte
-    },
-    {
       titol: 'Visit West Pomerania',
       categoria: { ca: 'Campanya digital · COIL', es: 'Campaña digital · COIL', en: 'Digital campaign · COIL' },
       any: '2024-25',
@@ -191,6 +162,35 @@ const PROJECTES = {
         es: 'Con Marina Sánchez, por parte de la UdG, hicimos la investigación previa, la definición de los públicos objetivo, las acciones digitales (SEO, SEM, redes sociales y email marketing), el presupuesto, el calendario y los KPI. Las estudiantes de Szczecin aportaron las actividades y atracciones de la región.',
         en: 'Together with Marina Sánchez, on behalf of the UdG, I carried out the preliminary research, defined the target audiences and planned the digital actions (SEO, SEM, social media and email marketing), the budget, the calendar and the KPIs. The Szczecin students contributed the region’s activities and attractions.'
       }
+    },
+    {
+      titol: 'Girocleta',
+      categoria: { ca: 'Campanya gràfica', es: 'Campaña gráfica', en: 'Print campaign' },
+      any: '2025',
+      carpeta: 'assets/projectes/academics/projecte-3/',
+      portada: 'portada.jpg',
+      sencera: true,          // la imatge de la targeta es veu sencera, sense retallar
+      fons: '#ffffff',        // color del marc al voltant de la imatge
+      galeria: [
+        'campanya-1.jpg', 'campanya-2.jpg',
+        'cartell-1.jpg', 'cartell-2.jpg', 'cartell-3.jpg', 'cartell-4.jpg', 'cartell-5.jpg', 'cartell-6.jpg'
+      ],
+      descripcio: {
+        ca: "Campanya fictícia per a la Girocleta, el servei de bicicleta compartida de Girona. Dues línies de cartells que conviden a deixar les excuses i a moure's per la ciutat en bici.",
+        es: 'Campaña ficticia para la Girocleta, el servicio de bicicleta compartida de Girona. Dos líneas de carteles que invitan a dejar las excusas y a moverse por la ciudad en bici.',
+        en: 'A fictional campaign for Girocleta, the bike-sharing service in Girona. Two poster series that invite people to drop the excuses and get around the city by bike.'
+      },
+      objectiu: {
+        ca: "Animar la gent de Girona a fer servir la Girocleta per moure's per la ciutat.",
+        es: 'Animar a la gente de Girona a usar la Girocleta para moverse por la ciudad.',
+        en: 'To encourage people in Girona to use Girocleta to get around the city.'
+      },
+      concepte: {
+        ca: "Dues línies: «No vinguis amb excuses, vine amb Girocleta!», que respon amb humor a les excuses de cada dia per no venir, i una sèrie que compara Girona amb grans ciutats («A Nova York toquen el clàxon, a Girona, la campaneta»).",
+        es: 'Dos líneas: «No vinguis amb excuses, vine amb Girocleta!», que responde con humor a las excusas de cada día para no venir, y una serie que compara Girona con grandes ciudades («A Nova York toquen el clàxon, a Girona, la campaneta»).',
+        en: 'Two series: “No vinguis amb excuses, vine amb Girocleta!” (“No excuses, come by Girocleta!”), which answers everyday excuses with humour, and a series comparing Girona with big cities (“In New York they honk the horn, in Girona, the bike bell”).'
+      },
+      contribucio: ''   // ✏️ explica què vas fer tu en aquest projecte
     },
     {
       titol: "Devesa't",

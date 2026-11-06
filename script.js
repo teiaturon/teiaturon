@@ -250,8 +250,15 @@ function buildCards(list, container, kind) {
     });
     if (p.enfoc) cover.style.objectPosition = p.enfoc;
     if (p.sencera) {
+      // Imatge sencera: el marc agafa la mateixa proporció que la imatge, sense marges
       cover.style.objectFit = 'contain';
       box.style.background = p.fons || 'var(--white)';
+      const fit = () => {
+        if (!cover.naturalWidth) return;
+        card.classList.add('pcard--fit');
+        card.style.setProperty('--ar', (cover.naturalWidth / cover.naturalHeight).toFixed(4));
+      };
+      if (cover.complete) fit(); else cover.addEventListener('load', fit, { once: true });
     }
     box.appendChild(cover);
 

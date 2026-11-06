@@ -277,10 +277,13 @@ mark { background: none; color: inherit; }
 .pgrid--pro { grid-template-columns: repeat(2, 1fr); }
 .pgrid--pro .pcard { aspect-ratio: 5 / 6; }
 /* Acadèmics: 3 files de 2, amb amplades alternades perquè la graella no sigui rígida */
-.pgrid--aca { grid-template-columns: repeat(5, 1fr); grid-auto-rows: clamp(220px, 30vw, 360px); }
-.pgrid--aca .pcard { grid-column: span 2; }
+.pgrid--aca { grid-template-columns: repeat(5, 1fr); }
+.pgrid--aca .pcard { grid-column: span 2; min-height: 220px; }
+/* La targeta ampla de cada fila marca l'alçada; la del costat s'hi ajusta */
 .pgrid--aca .pcard:nth-child(4n+1),
-.pgrid--aca .pcard:nth-child(4n+4) { grid-column: span 3; }
+.pgrid--aca .pcard:nth-child(4n+4) { grid-column: span 3; aspect-ratio: 1.9; }
+/* Targetes que mostren la imatge sencera: el marc pren la proporció de la imatge */
+.pgrid--aca .pcard.pcard--fit, .pgrid--pro .pcard.pcard--fit { aspect-ratio: var(--ar); }
 
 /* Targeta de projecte */
 .pcard {
@@ -506,6 +509,7 @@ body.modal-open { overflow: hidden; }
   .pgrid--pro, .pgrid--aca { grid-template-columns: 1fr; grid-auto-rows: auto; }
   .pgrid--pro .pcard { aspect-ratio: 4 / 3.6; }
   .pgrid .pcard, .pgrid--aca .pcard:nth-child(n) { grid-column: auto; aspect-ratio: 4 / 3; }
+  .pgrid .pcard.pcard--fit { aspect-ratio: var(--ar); min-height: 0; }
   .pgrid--pro .pcard:nth-child(n) { aspect-ratio: 4 / 3.6; }
 }
 @media (max-width: 480px) {
