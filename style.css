@@ -199,9 +199,6 @@ mark { background: none; color: inherit; }
 .s3 { bottom: 12%; left: 4%; animation-delay: -2s; }
 .s4 { bottom: 9%; right: 6%; animation-delay: -3s; }
 .s5 { top: 52%; left: 1%; animation-delay: -1.5s; }
-.s6 { top: 44%; right: 2%; animation-delay: -2.5s; }
-.s7 { top: 9%; left: 42%; animation-delay: -.5s; }
-.s8 { bottom: 5%; left: 38%; animation-delay: -3.5s; }
 @keyframes float { 0%,100% { transform: translateY(0) rotate(-6deg); } 50% { transform: translateY(-14px) rotate(8deg); } }
 
 /* ============ CINTA ============ */
