@@ -97,6 +97,7 @@ function applyLang() {
   document.querySelectorAll('[data-cv]').forEach(a => { a.href = lang === 'en' ? CV.en : CV.ca; });
   splitAboutWords();
   updateCards();
+  cursorLabel.refresh();
   if (modal.current) fillModal(modal.current, modal.index);
 }
 
@@ -270,6 +271,7 @@ function buildCards(list, container, kind) {
 
     card.append(box, shade, info);
     card.addEventListener('click', () => openModal(p, kind, card));
+    cursorLabel.attach(card, p);
     container.appendChild(card);
     cards.push({ card, p });
   });
@@ -283,6 +285,50 @@ function updateCards() {
     card.querySelectorAll('[data-ph] small').forEach(s => (s.textContent = t('projects.placeholder')));
   });
 }
+
+/* ============ NOM DEL PROJECTE QUE SEGUEIX EL PUNTER ============ */
+const cursorLabel = (() => {
+  const el = document.createElement('div');
+  el.className = 'cursor-label';
+  el.setAttribute('aria-hidden', 'true');
+  el.innerHTML = '<span class="cursor-label__name"></span><span class="cursor-label__meta"></span>';
+  document.body.appendChild(el);
+  const nameEl = el.firstChild, metaEl = el.lastChild;
+  const fine = window.matchMedia('(hover: hover) and (pointer: fine)');
+  let x = 0, y = 0, cx = 0, cy = 0, raf = null, current = null;
+
+  const tick = () => {
+    cx += (x - cx) * .22;                 // segueix el punter amb suavitat
+    cy += (y - cy) * .22;
+    el.style.transform = `translate(${cx}px, ${cy}px)`;
+    raf = Math.abs(x - cx) + Math.abs(y - cy) > .3 ? requestAnimationFrame(tick) : null;
+  };
+  const move = e => {
+    x = e.clientX; y = e.clientY;
+    if (!raf) raf = requestAnimationFrame(tick);
+  };
+  const fill = p => {
+    nameEl.textContent = tx(p.titol);
+    const meta = [tx(p.categoria), tx(p.any)].filter(Boolean).join(' · ');
+    metaEl.textContent = meta;
+    metaEl.hidden = !meta;
+  };
+  return {
+    attach(card, p) {
+      card.addEventListener('pointerenter', e => {
+        if (!fine.matches || e.pointerType !== 'mouse') return;
+        current = p; fill(p);
+        x = cx = e.clientX; y = cy = e.clientY;
+        el.style.transform = `translate(${cx}px, ${cy}px)`;
+        el.classList.add('is-on');
+      });
+      card.addEventListener('pointermove', e => { if (current === p) move(e); });
+      card.addEventListener('pointerleave', () => { if (current === p) { current = null; el.classList.remove('is-on'); } });
+      card.addEventListener('click', () => { current = null; el.classList.remove('is-on'); });
+    },
+    refresh() { if (current) fill(current); }
+  };
+})();
 
 buildCards(PROJECTES.professionals.slice(0, 2), document.getElementById('grid-pro'), 'pro');
 buildCards(PROJECTES.academics.slice(0, 6), document.getElementById('grid-aca'), 'aca');
