@@ -249,6 +249,10 @@ function buildCards(list, container, kind) {
       colorIndex, video: { autoplay: true, loop: true }
     });
     if (p.enfoc) cover.style.objectPosition = p.enfoc;
+    if (p.sencera) {
+      cover.style.objectFit = 'contain';
+      box.style.background = p.fons || 'var(--white)';
+    }
     box.appendChild(cover);
 
     const shade = document.createElement('span');

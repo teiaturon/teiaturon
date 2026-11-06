@@ -8,6 +8,8 @@
    - Si una imatge encara no existeix, la web mostra un requadre provisional.
    - "enfoc" (opcional): quina part de la portada es veu a la targeta,
      per exemple 'center top' (dalt), 'center' (mig) o 'center bottom' (baix).
+   - "sencera: true" (opcional): la imatge de la targeta es veu sencera, sense retallar;
+     "fons" és el color que omple el marc al voltant.
    - "document" (opcional): un PDF que s'obre en una pestanya nova des de la finestra del projecte.
    ===================================================================== */
 
@@ -111,7 +113,9 @@ const PROJECTES = {
       categoria: { ca: 'Campanya gràfica', es: 'Campaña gráfica', en: 'Print campaign' },
       any: '2025',
       carpeta: 'assets/projectes/academics/projecte-3/',
-      portada: 'portada.jpg',
+      portada: 'campanya-1.jpg',
+      sencera: true,          // la imatge de la targeta es veu sencera, sense retallar
+      fons: '#ffffff',        // color del marc al voltant de la imatge
       galeria: [
         'campanya-1.jpg', 'campanya-2.jpg',
         'cartell-1.jpg', 'cartell-2.jpg', 'cartell-3.jpg', 'cartell-4.jpg', 'cartell-5.jpg', 'cartell-6.jpg'
