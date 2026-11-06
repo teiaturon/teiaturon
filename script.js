@@ -27,7 +27,7 @@ const I18N = {
     'projects.open': 'Obrir el projecte', 'projects.placeholder': 'Imatge provisional', 'projects.image': 'Imatge',
     'modal.close': 'Tancar', 'modal.prev': 'Anterior', 'modal.next': 'Següent',
     'modal.goal': 'Objectiu', 'modal.concept': 'Concepte creatiu', 'modal.role': 'La meva contribució',
-    'contact.title': 'Parlem<mark>?</mark>', 'contact.window': 'Nou missatge',
+    'contact.title': '<mark>Parlem?</mark>', 'contact.window': 'Nou missatge',
     'contact.lead': "Si vols col·laborar amb mi o simplement dir-me hola, escriu-me per correu o per les meves xarxes!",
     'contact.email': 'Correu', 'contact.cv': 'Veure el meu CV 📄',
     'footer': 'Fet amb molta creativitat'
@@ -50,7 +50,7 @@ const I18N = {
     'projects.open': 'Abrir el proyecto', 'projects.placeholder': 'Imagen provisional', 'projects.image': 'Imagen',
     'modal.close': 'Cerrar', 'modal.prev': 'Anterior', 'modal.next': 'Siguiente',
     'modal.goal': 'Objetivo', 'modal.concept': 'Concepto creativo', 'modal.role': 'Mi contribución',
-    'contact.title': '¿Hablamos<mark>?</mark>', 'contact.window': 'Nuevo mensaje',
+    'contact.title': '<mark>¿Hablamos?</mark>', 'contact.window': 'Nuevo mensaje',
     'contact.lead': "Si quieres colaborar conmigo o simplemente saludarme, ¡escríbeme por correo o por mis redes!",
     'contact.email': 'Correo', 'contact.cv': 'Ver mi CV 📄',
     'footer': 'Hecho con mucha creatividad'
@@ -73,7 +73,7 @@ const I18N = {
     'projects.open': 'Open project', 'projects.placeholder': 'Placeholder image', 'projects.image': 'Image',
     'modal.close': 'Close', 'modal.prev': 'Previous', 'modal.next': 'Next',
     'modal.goal': 'Goal', 'modal.concept': 'Creative concept', 'modal.role': 'My contribution',
-    'contact.title': "Let's talk<mark>!</mark>", 'contact.window': 'New message',
+    'contact.title': "<mark>Let's talk!</mark>", 'contact.window': 'New message',
     'contact.lead': "Want to collaborate or just say hi? Drop me an email or find me on social media!",
     'contact.email': 'Email', 'contact.cv': 'View my CV 📄',
     'footer': 'Made with lots of creativity'
