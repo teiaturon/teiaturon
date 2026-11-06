@@ -204,9 +204,11 @@ function buildCards(list, container, kind) {
     const box = document.createElement('span');
     box.className = 'pcard__media';
     const colorIndex = kind === 'pro' ? i : i + 2;
-    box.appendChild(media(p.portada ? p.carpeta + p.portada : '', {
+    const cover = media(p.portada ? p.carpeta + p.portada : '', {
       colorIndex, video: { autoplay: true, loop: true }
-    }));
+    });
+    if (p.enfoc) cover.style.objectPosition = p.enfoc;
+    box.appendChild(cover);
 
     const shade = document.createElement('span');
     shade.className = 'pcard__shade';
