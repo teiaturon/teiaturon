@@ -5,6 +5,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
    ✏️ Si canvies un text de la web, canvia'l aquí en els tres idiomes. */
 const I18N = {
   ca: {
+    'nav.home': 'Inici',
     'about.skills': "Habilitats",
     'skill.creativity': "Creativitat",
     'hero.role': "Estudiant de Publicitat i Relacions Públiques",
@@ -25,6 +26,7 @@ const I18N = {
     'footer': 'Fet amb molta creativitat'
   },
   es: {
+    'nav.home': 'Inicio',
     'about.skills': "Habilidades",
     'skill.creativity': "Creatividad",
     'hero.role': "Estudiante de Publicidad y Relaciones Públicas",
@@ -45,6 +47,7 @@ const I18N = {
     'footer': 'Hecho con mucha creatividad'
   },
   en: {
+    'nav.home': 'Home',
     'about.skills': "Skills",
     'skill.creativity': "Creativity",
     'hero.role': "Advertising & Public Relations Student",
@@ -367,6 +370,7 @@ const aboutText = document.getElementById('about-text');
 let aboutWords = [];
 
 function splitAboutWords() {
+  // Cada lletra va dins d'un <span class="ch-a">; les paraules no es parteixen entre línies
   const walk = node => {
     [...node.childNodes].forEach(n => {
       if (n.nodeType === 3) {
@@ -374,33 +378,45 @@ function splitAboutWords() {
         n.textContent.split(/(\s+)/).forEach(part => {
           if (!part) return;
           if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
-          const w = document.createElement('span');
-          w.className = 'w';
-          w.textContent = part;
-          frag.appendChild(w);
+          const word = document.createElement('span');
+          word.className = 'w';
+          [...part].forEach(c => {
+            const ch = document.createElement('span');
+            ch.className = 'ch-a';
+            ch.textContent = c;
+            word.appendChild(ch);
+          });
+          frag.appendChild(word);
         });
         n.replaceWith(frag);
       } else if (n.nodeType === 1) walk(n);
     });
   };
   walk(aboutText);
-  aboutWords = [...aboutText.querySelectorAll('.w')];
+  aboutWords = [...aboutText.querySelectorAll('.ch-a')];
+  lastShown = -1;
   updateAboutWords();
 }
 
+let lastShown = -1;
 function updateAboutWords() {
   if (!aboutWords.length) return;
   const vh = window.innerHeight;
   const r = aboutText.getBoundingClientRect();
-  const start = vh * .95;         // comença quan el text entra per baix
-  const end = vh * .8;            // acaba quan el final del text arriba al 80% de la pantalla
+  const start = vh * .9;          // comença quan el text entra per baix
+  const end = vh * .85;           // acaba quan el final del text arriba al 85% de la pantalla
   const p = Math.min(1, Math.max(0, (start - r.top) / (r.height + start - end)));
   const n = Math.round(p * aboutWords.length);
-  aboutWords.forEach((w, i) => w.classList.toggle('on', i < n));
+  if (n === lastShown) return;
+  lastShown = n;
+  aboutWords.forEach((c, i) => {
+    c.classList.toggle('on', i < n);
+    c.classList.toggle('caret', i === n - 1 && n < aboutWords.length);
+  });
   // Les paraules clau es subratllen quan ja s'han escrit
   aboutText.querySelectorAll('strong').forEach(st => {
-    const ws = st.querySelectorAll('.w');
-    st.classList.toggle('on', ws.length > 0 && ws[ws.length - 1].classList.contains('on'));
+    const cs = st.querySelectorAll('.ch-a');
+    st.classList.toggle('on', cs.length > 0 && cs[cs.length - 1].classList.contains('on'));
   });
 }
 
