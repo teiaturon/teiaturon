@@ -369,7 +369,7 @@ const modal = {
 };
 
 function fillModal(p, index = 0) {
-  modal.bar.className = 'window__bar ' + (modal.kind === 'pro' ? 'window__bar--tomato' : 'window__bar--olive');
+  modal.bar.className = 'window__bar ' + (modal.kind === 'pro' ? 'window__bar--tomato' : 'window__bar--blush');
   modal.url.textContent = p.carpeta.replace(/^assets\/projectes\//, '').replace(/\/$/, '');
   modal.title.textContent = tx(p.titol);
   modal.meta.textContent = [tx(p.categoria), tx(p.any)].filter(Boolean).join(' · ');
