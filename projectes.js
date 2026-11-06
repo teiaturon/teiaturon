@@ -18,16 +18,36 @@ const PROJECTES = {
   /* ---------- 2 PROJECTES PROFESSIONALS ---------- */
   professionals: [
     {
-      titol: { ca: 'Projecte professional 1', es: 'Proyecto profesional 1', en: 'Professional project 1' },
-      categoria: { ca: '[Categoria]', es: '[Categoría]', en: '[Category]' },
-      any: '[Any]',
+      titol: { ca: 'Carnet Jove · Puja de nivell', es: 'Carnet Jove · Puja de nivell', en: 'Carnet Jove · Level Up' },
+      categoria: { ca: 'Actriu · Campanya publicitària', es: 'Actriz · Campaña publicitaria', en: 'Actress · Advertising campaign' },
+      any: '2025',
       carpeta: 'assets/projectes/professionals/projecte-1/',
       portada: 'portada.jpg',
-      galeria: ['1.jpg', '2.jpg', '3.jpg'],
-      descripcio:  { ca: '[Explicació breu del projecte]', es: '[Explicación breve del proyecto]', en: '[Short description of the project]' },
-      objectiu:    { ca: '[Objectiu del projecte]', es: '[Objetivo del proyecto]', en: '[Project goal]' },
-      concepte:    { ca: '[Concepte creatiu]', es: '[Concepto creativo]', en: '[Creative concept]' },
-      contribucio: { ca: '[La meva contribució]', es: '[Mi contribución]', en: '[My contribution]' }
+      galeria: [
+        'https://www.youtube.com/watch?v=9w3DgJkT8Q0',   // espot final
+        'espot-formacio.jpg', 'marquesina.jpg', 'autobus-2.jpg', 'autobus-1.jpg', 'presentacio.jpg',
+        'https://www.youtube.com/watch?v=KlsNxD-eNKk'    // making of
+      ],
+      descripcio: {
+        ca: "Vaig ser una de les protagonistes de l'espot 2025 del Carnet Jove de la Generalitat de Catalunya, «Puja de nivell». La campanya es va difondre per tot Catalunya.",
+        es: 'Fui una de las protagonistas del spot 2025 del Carnet Jove de la Generalitat de Catalunya, «Puja de nivell». La campaña se difundió por toda Cataluña.',
+        en: 'I was one of the leads in the 2025 Carnet Jove spot for the Government of Catalonia, “Puja de nivell” (“Level Up”). The campaign ran all over Catalonia.'
+      },
+      objectiu: {
+        ca: 'Donar a conèixer els avantatges del Carnet Jove entre el públic jove de Catalunya.',
+        es: 'Dar a conocer las ventajas del Carnet Jove entre el público joven de Cataluña.',
+        en: 'To promote the benefits of the Carnet Jove youth card among young people in Catalonia.'
+      },
+      concepte: {
+        ca: "«Puja de nivell amb el Carnet Jove»: una estètica de videojoc que barreja persones reals i personatges 3D per mostrar com el carnet t'ajuda a pujar de nivell en formació, viatges, cultura i oci.",
+        es: '«Puja de nivell amb el Carnet Jove»: una estética de videojuego que mezcla personas reales y personajes 3D para mostrar cómo el carnet te ayuda a subir de nivel en formación, viajes, cultura y ocio.',
+        en: '“Level up with the Carnet Jove”: a video-game look that mixes real people and 3D characters to show how the card helps you level up in education, travel, culture and leisure.'
+      },
+      contribucio: {
+        ca: "Vaig actuar a l'espot com a una de les protagonistes. Vaig aparèixer a la televisió, la ràdio, l'email màrqueting, les xarxes socials i la publicitat exterior (marquesines i autobusos) per tot Catalunya.",
+        es: 'Actué en el spot como una de las protagonistas. Aparecí en televisión, radio, email marketing, redes sociales y publicidad exterior (marquesinas y autobuses) por toda Cataluña.',
+        en: 'I acted in the spot as one of the leads. I appeared on TV, radio, email marketing, social media and outdoor advertising (bus shelters and buses) all over Catalonia.'
+      }
     },
     {
       titol: { ca: 'Projecte professional 2', es: 'Proyecto profesional 2', en: 'Professional project 2' },
