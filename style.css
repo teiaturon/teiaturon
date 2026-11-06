@@ -320,21 +320,19 @@ mark { background: none; color: inherit; }
 }
 .pcard:hover .pcard__shade, .pcard:focus-visible .pcard__shade { opacity: 1; }
 .pcard:hover .pcard__info, .pcard:focus-visible .pcard__info { opacity: 1; transform: none; }
-/* Pantalles tàctils: el nom sempre visible */
-@media (hover: none) {
-  .pcard__shade { opacity: 1; }
-  .pcard__info { opacity: 1; transform: none; }
-}
 
-/* Nom del projecte que segueix el punter (només amb ratolí) */
+
+/* Nom del projecte que segueix el punter (només a l'ordinador) */
 .cursor-label {
   position: fixed; left: 0; top: 0; z-index: 90; pointer-events: none;
   display: flex; flex-direction: column; align-items: flex-start; gap: .25rem;
-  translate: -50% -50%; opacity: 0; scale: .6;
-  transition: opacity .25s ease, scale .35s cubic-bezier(.2,.9,.3,1.3);
-  will-change: transform;
+  opacity: 0; will-change: transform;
+  transition: opacity .3s ease;
 }
-.cursor-label.is-on { opacity: 1; scale: 1; }
+.cursor-label__inner { display: flex; flex-direction: column; align-items: flex-start; gap: .25rem;
+  margin: 18px 0 0 18px; scale: .7; transform-origin: 0 0; transition: scale .45s cubic-bezier(.2,.9,.3,1.2); }
+.cursor-label.is-on { opacity: 1; }
+.cursor-label.is-on .cursor-label__inner { scale: 1; }
 .cursor-label__name {
   font-weight: 800; font-size: clamp(1rem, 1.6vw, 1.25rem); line-height: 1.15; white-space: nowrap;
   color: var(--ink); background: var(--vanilla);
@@ -345,13 +343,34 @@ mark { background: none; color: inherit; }
   font-weight: 600; font-size: .72rem; white-space: nowrap; margin-left: .9rem;
   color: var(--vanilla); background: var(--ink); padding: .1rem .7rem; border-radius: 999px; rotate: -3deg;
 }
+/* Punt que marca exactament on és el punter */
+.cursor-dot {
+  position: fixed; left: 0; top: 0; z-index: 91; pointer-events: none;
+  width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 50%;
+  background: var(--rose); border: 2px solid var(--vanilla); box-shadow: 0 0 0 1.5px var(--ink);
+  opacity: 0; scale: .3; transition: opacity .2s ease, scale .25s ease; will-change: transform;
+}
+.cursor-dot.is-on { opacity: 1; scale: 1; }
+.cursor-dot.is-down { scale: .7; }
+
+/* Enfosquiment suau del projecte on és el punter */
+.pcard::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: rgba(43, 26, 28, .35); opacity: 0; transition: opacity .4s ease;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .pcard { cursor: none; }
+  .pcard:hover::after { opacity: 1; }
   .pcard .pcard__shade, .pcard .pcard__info { display: none; }
   /* Amb el teclat, el nom es mostra a la targeta */
   .pcard:focus-visible .pcard__shade, .pcard:focus-visible .pcard__info { display: block; }
 }
-@media (prefers-reduced-motion: reduce) { .cursor-label { transition: opacity .2s; } }
+/* Mòbil i tauleta: imatges netes, sense nom ni enfosquiment */
+@media not all and (hover: hover) and (pointer: fine) {
+  .pcard .pcard__shade, .pcard .pcard__info, .cursor-label, .cursor-dot { display: none !important; }
+}
+@media (prefers-reduced-motion: reduce) { .cursor-label, .cursor-label__inner { transition: opacity .2s; } }
 
 /* Imatges provisionals */
 .ph {

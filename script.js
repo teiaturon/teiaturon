@@ -286,26 +286,35 @@ function updateCards() {
   });
 }
 
-/* ============ NOM DEL PROJECTE QUE SEGUEIX EL PUNTER ============ */
+/* ============ NOM DEL PROJECTE QUE SEGUEIX EL PUNTER (només ordinador) ============ */
 const cursorLabel = (() => {
   const el = document.createElement('div');
   el.className = 'cursor-label';
   el.setAttribute('aria-hidden', 'true');
-  el.innerHTML = '<span class="cursor-label__name"></span><span class="cursor-label__meta"></span>';
-  document.body.appendChild(el);
-  const nameEl = el.firstChild, metaEl = el.lastChild;
+  el.innerHTML = '<div class="cursor-label__inner"><span class="cursor-label__name"></span><span class="cursor-label__meta"></span></div>';
+  const dot = document.createElement('div');
+  dot.className = 'cursor-dot';
+  dot.setAttribute('aria-hidden', 'true');
+  document.body.append(el, dot);
+  const nameEl = el.querySelector('.cursor-label__name'), metaEl = el.querySelector('.cursor-label__meta');
   const fine = window.matchMedia('(hover: hover) and (pointer: fine)');
-  let x = 0, y = 0, cx = 0, cy = 0, raf = null, current = null;
+  let x = 0, y = 0, cx = 0, cy = 0, raf = null, current = null, last = 0;
 
-  const tick = () => {
-    cx += (x - cx) * .22;                 // segueix el punter amb suavitat
-    cy += (y - cy) * .22;
-    el.style.transform = `translate(${cx}px, ${cy}px)`;
-    raf = Math.abs(x - cx) + Math.abs(y - cy) > .3 ? requestAnimationFrame(tick) : null;
+  // Moviment suau: l'etiqueta persegueix el punter amb una corba que no depèn dels fps
+  const tick = now => {
+    const dt = Math.min(64, now - (last || now)); last = now;
+    const k = 1 - Math.pow(0.001, dt / 1000 * 1.6);   // ~ 0.1 per fotograma a 60 fps
+    cx += (x - cx) * k;
+    cy += (y - cy) * k;
+    el.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
+    if (Math.abs(x - cx) + Math.abs(y - cy) > .1 || current) raf = requestAnimationFrame(tick);
+    else { raf = null; last = 0; }
   };
+  const start = () => { if (!raf) { last = 0; raf = requestAnimationFrame(tick); } };
   const move = e => {
     x = e.clientX; y = e.clientY;
-    if (!raf) raf = requestAnimationFrame(tick);
+    dot.style.transform = `translate3d(${x}px, ${y}px, 0)`;   // el punt va exactament amb el punter
+    start();
   };
   const fill = p => {
     nameEl.textContent = tx(p.titol);
@@ -313,18 +322,24 @@ const cursorLabel = (() => {
     metaEl.textContent = meta;
     metaEl.hidden = !meta;
   };
+  const hide = () => { current = null; el.classList.remove('is-on'); dot.classList.remove('is-on', 'is-down'); };
   return {
     attach(card, p) {
       card.addEventListener('pointerenter', e => {
         if (!fine.matches || e.pointerType !== 'mouse') return;
+        const fresh = !el.classList.contains('is-on');
         current = p; fill(p);
-        x = cx = e.clientX; y = cy = e.clientY;
-        el.style.transform = `translate(${cx}px, ${cy}px)`;
-        el.classList.add('is-on');
+        x = e.clientX; y = e.clientY;
+        if (fresh) { cx = x; cy = y; el.style.transform = `translate3d(${cx}px, ${cy}px, 0)`; }
+        dot.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+        el.classList.add('is-on'); dot.classList.add('is-on');
+        start();
       });
       card.addEventListener('pointermove', e => { if (current === p) move(e); });
-      card.addEventListener('pointerleave', () => { if (current === p) { current = null; el.classList.remove('is-on'); } });
-      card.addEventListener('click', () => { current = null; el.classList.remove('is-on'); });
+      card.addEventListener('pointerdown', () => dot.classList.add('is-down'));
+      card.addEventListener('pointerup', () => dot.classList.remove('is-down'));
+      card.addEventListener('pointerleave', () => { if (current === p) hide(); });
+      card.addEventListener('click', hide);
     },
     refresh() { if (current) fill(current); }
   };
