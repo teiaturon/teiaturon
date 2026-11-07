@@ -120,7 +120,6 @@ mark { background: none; color: inherit; }
   padding: 90px 1.2rem 60px;
   background:
     radial-gradient(circle at 15% 20%, rgba(220,79,124,.35) 0 14%, transparent 15%),
-    radial-gradient(circle at 88% 80%, rgba(244,200,28,.35) 0 16%, transparent 17%),
     var(--vanilla);
 }
 .hero__window { position: relative; z-index: 2; width: min(1000px, 100%); }
