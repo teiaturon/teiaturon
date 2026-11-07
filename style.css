@@ -118,9 +118,7 @@ mark { background: none; color: inherit; }
   min-height: 100svh;
   display: grid; place-items: center;
   padding: 90px 1.2rem 60px;
-  background:
-    radial-gradient(circle at 15% 20%, rgba(220,79,124,.35) 0 14%, transparent 15%),
-    var(--vanilla);
+  background: var(--vanilla);
 }
 .hero__window { position: relative; z-index: 2; width: min(1000px, 100%); }
 .hero__body {
